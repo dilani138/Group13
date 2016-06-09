@@ -1,6 +1,21 @@
+<!DOCTYPE HTML >
+
+<html lang= "en-US" >
+
+<head>
+
+	<title> Footer of the web page </title>
+
+	<!-- Links and meta data -->
+	<link rel= "stylesheet" href= "../css/structure.css" type= "TEXT/CSS" />
+
 <!-- Footer of the web page -->
 <!-- ....................................................................................................................... -->
-	<div class= "footer">  
+<div class= "container_spec" >
+<div class= "footer" >
+	
+<!-- Contact details of VTASL -->	
+	<div class= "ft_contact">  
 		<h4>Contact Us </h4>
 		<p>
 		Vocational Training Authority<br/>
@@ -15,10 +30,72 @@
 		Fax : +94112581904<br/>
 		Email :info@vtasl.gov.lk<br/> 
 		</p> 
-		
-	© Copyright Vocational Training Authority 2014. </div>
+	</div>	
+	
+<!-- Details about Courses -->
+	<div class= "ft_courses" >
+		<h4>Courses </h4>
+		<p>
+		Course 01: aaaaaaaaaaaaaaa<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		</p>
+	</div>
+	
+<!-- Details about Courses -->
+	<div class= "ft_links" >
+		<h4>Courses </h4>
+		<p>
+		Course 01: aaaaaaaaaaaaaaa<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		</p>
+	</div>
+	
+<!-- Details about Courses -->
+	<div class= "ft_posts" >
+		<h4>Courses </h4>
+		<p>
+		Course 01: aaaaaaaaaaaaaaa<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		Course 01: aaaaaaaaaaaaaaa	<br/> 
+		</p>
+	</div>
+
+</div>
+	
+<!-- Copyrights -->	
+<div class= "end" >
+	<p>
+	© Copyright Vocational Training Authority 2016. <br/>
+	Developed by WEBMISS developing team of University of Colombo School of Computing 
+	</p>
+</div>
+
+</div>
 <!-- ....................................................................................................................... -->
 
-
+</head>
+<body>
+</body>
+</html>
 
 
