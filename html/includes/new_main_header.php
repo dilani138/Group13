@@ -24,7 +24,8 @@
 <!-- Header of the web page -->
 
 	<div class= "header" >
-		<img class= "banner" src= "../images/banner/vtasl_banner.png" alt= "Vocational Training Authority of Sri Lanka" />
+		<img class= "banner" src= "../Images/banner/mylogo1.png" alt= "Vocational Training Authority of Sri Lanka" />
+		
 	</div>
 <!-- .............................................................................................................................................................................. -->
 
@@ -76,5 +77,3 @@
 
 </head>
 <body>
-</body>
-</html>

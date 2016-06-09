@@ -1,4 +1,4 @@
-<?php include("../includes/main_header.php");?>
+<?php include("../includes/new_main_header.php");?>
 <div class=image>
 	 <object  width="50%" height="300px" data="linux.jpg"></object> 
 </div>

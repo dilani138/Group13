@@ -36,16 +36,17 @@
 /* header */
 /*.......................................................................................................................*/
 .header {
-	float: left;
-	width: 100%;
-	height: auto;
-	background-color: #66ccff;
+	float: center;
+	width: 2000px;
+	height: 100px;
+	/*background-color: #66ccff;*/
 }
 
 img.banner{
-	float: left;
-	max-width: 104%;
-	height: auto;
+	float: center;
+	
+	width: 1000px;
+	height: 100px;
 }
 /*.......................................................................................................................*/
 
