@@ -19,63 +19,7 @@
 		
 			</tr>
 			
-<!--district of interest...................................................................................................-->
-			<tr>
-				<th>
-					<table>
-						<tr>
-							<th>
-								<img src = "distrect.jpg" align="head" align ="left-side" >
-							</th>
-							<th>
-								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
-																<option Course_value="Galle">Galle</option>
-																<option Course_value="Mathara">Mathara</option>
-																<option Course_value="Colombo">Colombo</option>
-							</th>
-						</tr>
-					</table>
-				</th>
-			</th>
-			
-<!--center of interest...................................................................................................-->
-			<tr>
-				<th>
-					<table>
-						<tr>
-							<th>
-								<img src = "center.jpg" align="head" align ="left-side" >
-							</th>
-							<th>
-								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
-																<option Course_value="#####">######</option>
-																<option Course_value="ddddd">ddddd</option>
-																<option Course_value="eeeee">eeeee</option>
-							</th>
-						</tr>
-					</table>
-				</th>
-			</th>
-			
-<!--tread of interest...................................................................................................-->
-			<tr>
-				<th>
-					<table>
-						<tr>
-							<th>
-								<img src = "treadofinterest.jpg" align="head" align ="left-side" >
-							</th>
-							<th>
-								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
-																<option Course_value="Appointment">Appointment</option>
-																<option Course_value="Interview">Interview</option>
-																<option Course_value="Regarding a post">Regarding a post</option>
-							</th>
-						</tr>
-					</table>
-				</th>
-			</th>
-			
+
 <!--full name...................................................................................................-->
 			<tr>
 				<th>
@@ -219,6 +163,64 @@
 				</th>
 			</th>
 			
+<!--district of interest...................................................................................................-->
+			<tr>
+				<th>
+					<table>
+						<tr>
+							<th>
+								<img src = "distrect.jpg" align="head" align ="left-side" >
+							</th>
+							<th>
+								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
+																<option Course_value="Galle">Galle</option>
+																<option Course_value="Mathara">Mathara</option>
+																<option Course_value="Colombo">Colombo</option>
+							</th>
+						</tr>
+					</table>
+				</th>
+			</th>
+			
+<!--center of interest...................................................................................................-->
+			<tr>
+				<th>
+					<table>
+						<tr>
+							<th>
+								<img src = "center.jpg" align="head" align ="left-side" >
+							</th>
+							<th>
+								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
+																<option Course_value="#####">######</option>
+																<option Course_value="ddddd">ddddd</option>
+																<option Course_value="eeeee">eeeee</option>
+							</th>
+						</tr>
+					</table>
+				</th>
+			</th>
+			
+<!--tread of interest...................................................................................................-->
+			<tr>
+				<th>
+					<table>
+						<tr>
+							<th>
+								<img src = "treadofinterest.jpg" align="head" align ="left-side" >
+							</th>
+							<th>
+								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
+																<option Course_value="Appointment">Appointment</option>
+																<option Course_value="Interview">Interview</option>
+																<option Course_value="Regarding a post">Regarding a post</option>
+							</th>
+						</tr>
+					</table>
+				</th>
+			</th>
+			
+<!--submit.............................................................................................................................-->			
 			<tr>
 				<th>
 					<table>
