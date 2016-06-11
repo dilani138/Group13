@@ -1,4 +1,4 @@
-<?php include("../includes/main_header.php"); ?>
+<?php include("../includes/new_main_header.php"); ?>
 
 <p><br>
 <br/>
