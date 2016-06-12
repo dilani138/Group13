@@ -1,10 +1,4 @@
-<html>
-	<head>
-		<title>
-			online application
-		</title>
-	</head>
-	<body>
+<?php include("../includes/new_main_header.php");?>
 	
 		<table 
 		border ="0"
