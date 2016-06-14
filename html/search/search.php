@@ -1,21 +1,9 @@
-<!DOCTYPE HTML >
+<?php include("../includes/new_main_header.php");?>
 
-<html lang= "en-US" >
-
-<head >
-
-	<title> Search Page </title>
-	
-</head>
-
-<body>
 <div class= "container" >
 
 
-		<?php 
-		include("../includes/main_header.php"); 
-		include("../navigation/nav_actv_search.php");	
-		?>
+		
 	
 	
 	<div class= "content" >
@@ -91,7 +79,7 @@
 	</div>
 	
 	
-	<?php include("../includes/main_footer.php"); ?>
+	
 	
 	
 </div>

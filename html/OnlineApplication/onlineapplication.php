@@ -9,7 +9,7 @@
 <!--Application form...................................................................................................-->
 		
 			<tr>
-				<th><img src = "Applicationform.jpg" align ="left" ></th>
+				<th><img src = "application/Applicationform.jpg" align ="left" ></th>
 		
 			</tr>
 			
@@ -20,7 +20,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "fullname.jpg" align="head" align ="left-side" >
+								<img src = "application/fullName.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><input type="text" class="input-field" name="field1" value="" size ="45%" >
@@ -35,7 +35,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "gender.jpg" align="head" align ="left-side" >
+								<img src = "application/gender.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><input type="radio" name="gender" value="male">Male<br>
@@ -52,7 +52,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "dateofbirth.jpg" align="head" align ="left-side" >
+								<img src = "application/dateofbirth.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required"></span></span><input type="date" class="input-field" name="field3" value="" size="45%"> 
@@ -67,7 +67,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "nic.jpg" align="head" align ="left-side" >
+								<img src = "application/nic.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><input type="text" class="input-field" name="field1" value="" size ="45%" >
@@ -83,7 +83,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "address.jpg" align="head" align ="left-side" >
+								<img src = "application/address.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><input type="text" class="input-field" name="field1" value="" size ="45%" rows="5" >
@@ -99,7 +99,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "email.jpg" align="head" align ="left-side" >
+								<img src = "application/email.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								</span></span><input type="email" class="input-field" name="field2" value="" size="45%">
@@ -115,7 +115,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "contact.jpg" align="head" align ="left-side" >
+								<img src = "application/contact.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<input type="text" class="input-field" name="field3" value="" size="45%">
@@ -131,7 +131,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "acadamic.jpg" align="head" align ="left-side" >
+								<img src = "application/acadamic.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><textarea></textarea>
@@ -148,7 +148,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "profetional.jpg" align="head" align ="left-side" >
+								<img src = "application/profetional.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><input type="textarea" class="input-field" name="field1" value="" size ="45%" rows="5" >
@@ -164,7 +164,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "distrect.jpg" align="head" align ="left-side" >
+								<img src = "application/distrect.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
@@ -183,7 +183,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "center.jpg" align="head" align ="left-side" >
+								<img src = "application/center.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
@@ -202,7 +202,7 @@
 					<table>
 						<tr>
 							<th>
-								<img src = "treadofinterest.jpg" align="head" align ="left-side" >
+								<img src = "application/treadofinterest.jpg" align="head" align ="left-side" >
 							</th>
 							<th>
 								<span class="required">  </span><select name="field4" class="select-field"><br><br/>
@@ -221,7 +221,7 @@
 					<table>
 						<tr>
 							<th>
-								<button type="submit" value="Submit"><img src = "su.jpg" align="head" align ="left-side" ></button>
+								<button type="submit" value="Submit"><img src = "application/su.png" align="head" align ="left-side" ></button>
 							</th>
 						</tr>
 					</table>

@@ -1,0 +1,246 @@
+/*
+=================================================================================
+|	* |THESE ARE MEDIA QUERIES.													|
+|	* |THIS MAKES WEB PAGES RESPONSIVE TO SCREEN RESIZING.						|
+|	* |N0 NEED TO USE BOOTSTRAP.												|	
+|	* |ANYONE CAN CUSTOMIZE THESE QUERIES HERE IT SELF.							|
+|	* |USE THESE CLASSES("COL-1") WHEN SRTUCTURING THE WEB PAGES.				|
+=================================================================================
+*/
+
+
+/* |FOR MOBILE PHONES| */
+@media only screen and (min-width: 300px) {
+	.col-S-1 {width: 100%;}
+	
+	h1 {
+		font-family: Vardena; 
+		font-size: 10px;
+		color: blue; 
+		line-height:100%; 
+		text-align: left; 
+	}
+	
+	p {
+		font-family: Vardena;
+		/*font-size: 15px;*/ 
+		color: black;
+		line-height:130%; 
+	}
+	
+	img {
+		width: 200px;
+		height: 220px; 
+		background-color: white;
+	}
+	
+	table {
+		max-width: 250px;
+		font-size:8px;
+	}
+	
+	.banner {
+		width:100%;
+		height: 2%;
+	}
+	
+}
+
+/* |FOR TABLETS| */
+@media only screen and (min-width: 600px) {
+	
+	.col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+	.col-m-13 {width: 15%;}
+	.col-m-14 {width: 35%;}
+	
+	h1 {
+		font-family: Vardena;
+		/*font-size: 40px;*/ 
+		color: red; 
+		line-height:100%;
+		text-align: left;
+	}
+	
+	p {
+		font-family: Vardena; 
+		/*font-size: 20px;*/ 
+		color: green; 
+		line-height:100%;
+	}
+	
+	img {
+		width: 400px; 
+		height: 440px; 
+		background-color: white; 
+	}
+	
+	table {
+		max-width: 580px;
+		font-size: 15px;
+	}
+	
+	.banner {
+		width: 100%;
+		height: 2%; 
+	}
+}
+
+/* |FOR DESKTOP AND WIDE SCREANS| */
+@media only screen and (min-width: 780px) {
+	
+	.col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+	.col-13 {width: 15%;}
+	.col-14 {width: 35%;}
+	
+	h1 {
+		font-family: Vardena;
+		/*font-size: 60px;*/ 
+		color: purple; 
+		line-height:100%;
+	}
+	
+	p {
+		font-family: Vardena;
+		/*font-size: 30px;*/ 
+		color: black; 
+		line-height:100%; 
+	}
+	
+	img {
+		width: 800px;
+		height: 880px;
+		background-color: white; 
+	}
+	
+	table {
+		min-width: 800px;
+		font-size: 20px;
+	}
+	
+	.banner {
+		min-width: 780px;
+		width: 100%;
+		height: 2%;
+	}
+	
+	
+}
+
+/*
+=========================================================================================
+|	* |BASIC STRUCTURING STYLES ARE STYLE HERE.											|
+|	* |THESE CLASSES CREATES THE COMMON STRUCTURE OF WEB PAGE.							|
+|	* |YOU CAN USE "LEFT" CLASS AND "RIGHT" CLASS WITHOUT STYLING.						|
+|	* |THEY ARE DEFUALT CLASSES.														|
+=========================================================================================
+*/
+
+* {
+    box-sizing: border-box;		
+}
+
+[class*="col-"] {		
+    float: left;
+    padding: 10px;
+}
+
+/* |CONTAINER OF WHOLE PAGE| */
+.container{				
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	line-height: 100%;
+	background-color: #ffffff;
+}
+
+
+/* |HEADER CONTAINER| */
+.header::after {		
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* |CONTENT CONTAINER| */
+.content::after {		
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.background {
+	background-color: lightgray;
+	padding: 10px 20px 10px 20px;
+	text-align: justify;
+}
+
+/* |FOOTER CONTAINER| */
+.foot::after {		
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+.ft_contact {
+	background-color: blue;
+	color: #ffffff;
+	text-align: left;
+	padding: ;
+}
+
+.ft_courses,.ft_links {
+	background-color: blue;
+	color: #ffffff;
+	text-align: left;
+	padding: ;
+}
+
+.ft_posts{
+	background-color: blue;
+	color: #ffffff;
+	text-align: left;
+	padding: ;
+}
+
+.footer {				
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+/* |OTHER STYLING| */
+
+
+
+
+
+
+
