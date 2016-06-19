@@ -1,16 +1,7 @@
-<!DOCTYPE html >
-
-<html lang="en-US">
-
-<head>
-	
-	<title> Contact_Page </title>
+<?php include("../in/header.php");?>
 
 	<link rel="stylesheet" href="../css/media_queries_1.css" />
 	<link rel="stylesheet" href="../basic_structure.css" />
-
-
-</head>
 <body>
 		
 <div class="contianer">

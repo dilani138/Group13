@@ -6,12 +6,7 @@
 -->
 
 
-<!DOCTYPE html >
-<html lang= "en-US" >
-
-<head>
-	
-	<title> Responsive Navigation Only </title>
+<?php include("../in/header.php");?>
 	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +17,7 @@
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> <!--FONT FA FA STYLE SHEET -->
 
 	
-</head>
+
 <body>
 
 

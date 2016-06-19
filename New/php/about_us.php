@@ -1,16 +1,10 @@
-<!DOCTYPE html >
+<?php include("../in/header.php");?>
 
-<html lang="en-US">
-
-<head>
-	
-	<title> About us Page </title>
 
 	<link rel="stylesheet" href="../css/media_queries_1.css" />
 	<link rel="stylesheet" href="../basic_structure.css" />
 
-</head>
-<body>
+
 		
 <div class="contianer">
 
