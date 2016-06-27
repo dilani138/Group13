@@ -1,5 +1,5 @@
-<html>
-<body>
+<?php include("../includes/new_main_header.php");?>
+
 <form  method="POST" enctype="multipart/form-data">
 Select image to upload
 <input type="file" name="image">

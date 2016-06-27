@@ -1,13 +1,5 @@
-<!DOCTYPE HTML >
 
-<html lang= "en-US" >
-
-<head>
-
-	<title> Footer of the web page </title>
-
-	<!-- Links and meta data -->
-	<link rel= "stylesheet" href= "../css/structure.css" type= "TEXT/CSS" />
+</body>
 
 <!-- Footer of the web page -->
 <!-- ....................................................................................................................... -->
@@ -93,9 +85,8 @@
 </div>
 <!-- ....................................................................................................................... -->
 
-</head>
-<body>
-</body>
+
+
 </html>
 
 

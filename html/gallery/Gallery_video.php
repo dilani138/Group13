@@ -37,4 +37,5 @@ function playPause()
 
 	<!--/div-->
 
-<?php include("../includes/main_footer.php");?>
+</body>
+</html>
