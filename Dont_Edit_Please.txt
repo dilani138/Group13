@@ -1,0 +1,7 @@
+| This is for the directory - sample. |
+
+/*
+	# please do not update or edit any file or directory in this sample directory.
+	# This is the sample folder structure for our web project.
+	# If you want to edit any file in this folder, please make sure copy that file and edit anywhere else.
+*/

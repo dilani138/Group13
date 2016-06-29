@@ -1,0 +1,159 @@
+/*
+=================================================================================
+|	* |THIS IS NAVIGATION PAGE STYLE SHEET.										|
+|	* |NAVIGATION IS RESPONSIVE TO REZISING.									|
+=================================================================================
+*/
+.bg {
+	width: 100%;
+	background-color: #f9f9f9;
+	height: 180px;
+	padding-top: 185px;
+	padding-bottom: 70px;
+}
+
+
+.nav{
+	margin:0;
+	padding:0;
+	position: relative;
+}
+
+/* |STRIP THE UL OF PADDING AND LIST STYLING| */
+.nav ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+
+/* |CREATE A HORIZONTAL LIST WITH SPACING| */
+li {
+	display:inline-block;
+	float: left;
+	/*margin-right: 1px;*/
+}
+
+/* |STYLE FOR MENU LINKS| */
+li a {
+	display:block;
+	min-width:132.95px;
+	height: 60px;
+	background-color: #f9f9f9;
+	text-align: center;
+	line-height: 50px;
+	padding-top: 8px;
+	color: #0000cc;
+	/*font-size: 18px;*/
+	text-decoration: none;
+	font-family: Vardena,"Times New Roman", Arial, sans-serif;
+	box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.2);
+}
+
+/* |HOVER STATE FOR TOP LEVEL LINKS| */
+li:hover a {
+	background: #FFD700;
+}
+
+
+li a:hover:not(.active) {background-color: #0033ff; color: #ffffff;} 
+li a.active {
+	background-color: #00cc00; 
+	color: #ffffff;
+	border-left: 5px solid #009700;
+	border-right: 7px solid #00ff00;
+	border-top: 2px solid #00FF00;
+	border-bottom: 4px solid #009900;
+}
+
+/* |STYLE FOR DROPDOWN LINKS| */
+li:hover ul a {
+	color: #0000cc;
+	height: 50px;
+	line-height: 40px;
+	min-width: 132.95px;
+	text-align: left;
+	background-color: #f9f9f9;
+	padding-left: 15px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* |HOVER STATE FOR DROPDOWN LINKS| */
+li:hover ul a:hover {background-color: #0033ff;	color: #ffffff;}
+
+/* |HIDE DROPDOWN LINKS UNTIL THEY ARE NEEDED| */
+li ul {
+	display: none;
+}
+
+/* |MAKE DROPDOWN LINKS VERTICAL| */
+li ul li {
+	display: block;
+	float: none;
+}
+
+/* |PREVENT TEXT WRAPPING| */
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/* |DISPLAY THE DROPDOWN ON HOVER| */
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/* |STYLE 'SHOW MENU' LABEL BUTTON AND HIDE IT BY DEFAULT| */
+.show-menu {
+	font-family: Vardena,"Times New Roman", Arial, sans-serif;
+	text-decoration: none;
+	color: blue;
+	background-color: #f9f9f9;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* |HIDE CHECKBOX| */
+input[type=checkbox]{
+    display: none;
+}
+
+/* |SHOW MENU WHEN INVISIBLE CHECKBOX IS CHECKED| */
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+
+
+/*
+=================================================================================
+|	* |THIS IS RESPONSIVE STYLE PART.	 										|
+=================================================================================
+*/
+
+
+@media screen and (max-width : 760px){
+	/* |MAKE DROPDOWN LINKS APPEAR INLINE| */
+	ul {
+		position: static;
+		display: none;
+	}
+	/* |CREATE VERTICAL SPACING| */
+	li {
+		margin-bottom: 1px;
+	}
+	/* |MAKE ALL MENU LINKS FULL WIDTH| */
+	ul li, li a {
+		width: 100%;
+	}
+	/* |DISPLAY 'SHOW MENU' LINK| */
+	.show-menu {
+		display:block;
+	}
+}
+
+
+
