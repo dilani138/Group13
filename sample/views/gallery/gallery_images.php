@@ -11,9 +11,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
-<body>
-
-<h2 class="w3-center">Image Gallery</h2>
+<div class="col-b-1">
+<h2 class="w3-center">Gallery >> Photos </h2>
 <div class = "image">
 	<div class="w3-content" style="max-width:800px;position:relative">
 
@@ -33,7 +32,7 @@
 </div>
 
 <div class="image_flow">
-  <ul>
+  <ul class="">
           <li>
             
             <a class="fancybox" rel="group" href="Images/1.png">
@@ -107,6 +106,7 @@
           </li>
         </ul> 
     </div>
+ </div>   
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
