@@ -19,15 +19,15 @@
 			<ul id="menu" >  <!-- NAVIGATION BEGIN HERE -->
 			
 			
-				<li> <a href="../../php/home/home_page.php"> <i class= "fa fa-home" > </i>&nbsp Home </a> </li> <!-- HOME PAGE -->
+				<li> <a href="../../views/home/home_page.php"> <i class= "fa fa-home" > </i>&nbsp Home </a> </li> <!-- HOME PAGE -->
 				
 				
 				<li>																			
 				<a href="#"> About Us &nbsp <i class= "fa fa-angle-double-down"> </i> </a>  <!-- ABOUT US PAGE -->
 				
 					<ul class="hidden">
-						<li> <a href="../../php/home/about_us.php" > Who We Are </a> </li>
-						<li> <a href="../../php/home/authorities_message.php" > Authorities Message </a> </li>
+						<li> <a href="../../views/home/about_us.php" > Who We Are </a> </li>
+						<li> <a href="../../views/home/authorities_message.php" > Authorities Message </a> </li>
 					</ul>
 
 				</li>
@@ -37,23 +37,23 @@
 				<a href="#"> Gallery &nbsp <i class= "fa fa-angle-double-down" > </i> </a> <!-- GALLERY PAGE -->
 				
 					<ul class="hidden">
-						<li> <a href="../../php/gallery/gallery_images.php" > Photos </a> </li>
-						<li> <a href="../../php/gallery/gallery_videos.php" > Videos </a> </li>
+						<li> <a href="../../views/gallery/gallery_images.php" > Photos </a> </li>
+						<li> <a href="../../views/gallery/gallery_videos.php" > Videos </a> </li>
 					</ul>
 
 				</li>
 				
-				<li> <a href="../../php/skill_directory/login_page.php"> Skill Directory </a> </li><!-- SKILL DIRECTORY PAGE -->
+				<li> <a href="../../views/skill_directory/login_page.php"> Skill Directory </a> </li><!-- SKILL DIRECTORY PAGE -->
 			
-				<li> <a href="../../php/search/search.php"> <i class= "fa fa-search fa-lg " ></i> &nbsp Search  </a> </li> <!-- SEARCH PAGE -->
+				<li> <a href="../../views/search/search.php"> <i class= "fa fa-search fa-lg " ></i> &nbsp Search  </a> </li> <!-- SEARCH PAGE -->
 				
-				<li> <a href="../../php/search/apply_on_line.php"> Apply On-line </a> </li> <!-- APPLY ON LINE PAGE -->
+				<li> <a href="../../views/search/apply_on_line.php"> Apply On-line </a> </li> <!-- APPLY ON LINE PAGE -->
 				
-				<li> <a href="../../php/home/contact_page.php"> Contact </a> </li><!-- CONTACT PAGE -->
+				<li> <a href="../../views/home/contact_page.php"> Contact </a> </li><!-- CONTACT PAGE -->
 				
-				<li> <a href="../../php/skill_directory/login_page.php"> <i class= "fa fa-user fa-lg " ></i>&nbsp Profiles </a> </li> <!-- PROFILES PAGE -->
+				<li> <a href="../../views/skill_directory/login_page.php"> <i class= "fa fa-user fa-lg " ></i>&nbsp Profiles </a> </li> <!-- PROFILES PAGE -->
 				
-				<li> <a href="../../php/home/faqs.php" class= "active"> FAQs </a> </li> <!-- FAQS PAGE -->
+				<li> <a href="../../views/home/faqs.php" class= "active"> FAQs </a> </li> <!-- FAQS PAGE -->
 				
 				
 				<li>
