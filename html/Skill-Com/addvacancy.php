@@ -143,7 +143,7 @@
 <form action=_self name=post>
 Title: <br><br></tr><tr><input type="text" name="vaccancy" size="100%"><br><br>
 Description: <br><br><input type="text" name="vaccancy" size="100%" style="height:300px"><br><br>
-<input type="submit" value="Post"></form></div>
+<input type="submit" value="Publish"></form></div>
 </div>
 </body>
 </html>
