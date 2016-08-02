@@ -140,7 +140,8 @@
 <!-- input text add vaccancy area -->
 <div class="static">
 <div class="form">
-<form action=_self name=post>
+<form action="" name=post>
+Date: <br><br></tr><tr><input type="text" name="date" size="100%"><br><br>
 Title: <br><br></tr><tr><input type="text" name="vaccancy" size="100%"><br><br>
 Description: <br><br><input type="text" name="vaccancy" size="100%" style="height:300px"><br><br>
 <input type="submit" value="Publish"></form></div>
