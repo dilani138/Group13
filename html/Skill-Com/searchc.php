@@ -130,10 +130,10 @@
 
 <!-- black row with buttons -->
 <div class="button">
-<button class="button" type="button">Profile</button>
-<button class="button" type="button">Vacancies</button>
-<button class="button" type="button">Search</button>
-<button class="button" type="button">Logout</button>
+<a href="comprofile.php"><button class="button" type="button">Profile</button></a>
+<a href="AllVacancy.php"><button class="button" type="button">Vacancies</button></a>
+<a href="searchc.php"><button class="button" type="button">Search</button></a>
+<a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
 

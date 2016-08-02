@@ -117,7 +117,7 @@
     margin-left: 50px;
   
 } .form {
-    width: 100px;
+    
     margin: 10px 25% auto 25%;
 }
 </style>
@@ -132,28 +132,30 @@
 
 <!-- black row with buttons -->
 <div class="button">
-<button class="button" type="button">Profile</button>
-<button class="button" type="button">Vacancies</button>
-<button class="button" type="button">Search</button>
-<button class="button" type="button">Logout</button>
+<a href="comprofile.php"><button class="button" type="button">Profile</button></a>
+<a href="AllVacancy.php"><button class="button" type="button">Vacancies</button></a>
+<a href="searchc.php"><button class="button" type="button">Search</button></a>
+<a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
 
 <!-- content area -->
 <div class="static">
 <div class="form">
+<p style="font-size:150%">Edit your Company Profile Information here:</p>
+<form action="comprofile.php" name=post>
+<table>
+<tr><td> Company Name:</td><td> <input type="text" name="cname"></td></tr>
 
+<tr><td> User Name:</td><td> <input type="text" name="uname"></td></tr>
 
+<tr><td>Address:</td><td><input type="text" name="address"></td></tr>
+<tr><td>Telephone 1:</td><td><input type="text" name="tel1"></td></tr>
+<tr><td>Telephone 2:</td><td> <input type="text" name="tel2"></td></tr>
+<tr><td>Fax:</td><td> <input type="text" name="fax"></td></tr>
+<tr><td>Description:</td><td><input type="text" name="desc"></td></tr></table>
+<input type="submit" value="Update" name="comupdate"></form></div>
 
-
-
-
-
-
-
-
-
-</div>
 </div>
 </body>
 </html>
