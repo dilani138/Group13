@@ -116,8 +116,10 @@
     margin-right: 50px;
     margin-left: 50px;
   
+} .form {
+    width: 100px;
+    margin: 10px 25% auto 25%;
 }
-
 </style>
 </head>
 
@@ -138,18 +140,19 @@
 
 
 <!-- content area -->
-<div class="static">
-<form action="" target=_self name=post>
-<input type="textbox" name=sname placeholder="Type Student Name" size="28"> 
-<input type="submit" value=Search><br><br>
-<select name="scourse">
-    <option value="">Select course</option>
-    <option value="Baker">Baker</option>
-    <option value="Industrial Sewing machine operator">Industrial Sewing machine operator</option>
-    <option value="Work study officer">Work study officer</option>
-  </select>
-<input type="submit" value=Search></form>
 
+<div class="static">
+<h3>The following are the list of Vaccancies published</h3>
+
+<div class="form">
+<table border="1">
+<tr><th colspan="2">Date</th><th colspan="3">Title</th><th colspan="5">Description</th></tr>
+<tr></tr>
+ 
+</table>
+<br>
+<form action="addvacancy.php" name=post>
+<input type="submit" value="Add Vacancy"></form></div>
 </div>
 </body>
 </html>

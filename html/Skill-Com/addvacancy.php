@@ -5,7 +5,7 @@
 
 <head >
 
-	<title> Skill Directory-Company Search </title>
+	<title> Skill Directory-Company Vaccancy </title>
 	
 </head>
 
@@ -107,7 +107,8 @@
 	color: white;
 	cursor: pointer;
 	margin: 10px 12px;
-}.static {
+}
+.static {
     position: static;
     border: 1px solid #87CEEB;
 	padding-left:10px;
@@ -115,19 +116,19 @@
     margin-bottom: 100px;
     margin-right: 50px;
     margin-left: 50px;
-  
+	
+} .form {
+    width: 100px;
+    margin: 10px 25% auto 25%;
 }
-
 </style>
 </head>
 
 <body>
 <!-- profile picture -->
 <div style="background-color:#87CEEB; padding:25px">
-<input type="file" name="" accept="image/*" capture>
-<br><br><br><br><br>
+<img style="float:left" src="user.png" width:"150" height:"150"><h3>Abc Co ltd</h3><br><br><br><br><br>
 </div>
-
 <!-- black row with buttons -->
 <div class="button">
 <button class="button" type="button">Profile</button>
@@ -136,20 +137,13 @@
 <button class="button" type="button">Logout</button>
 </div>
 
-
-<!-- content area -->
+<!-- input text add vaccancy area -->
 <div class="static">
-<form action="" target=_self name=post>
-<input type="textbox" name=sname placeholder="Type Student Name" size="28"> 
-<input type="submit" value=Search><br><br>
-<select name="scourse">
-    <option value="">Select course</option>
-    <option value="Baker">Baker</option>
-    <option value="Industrial Sewing machine operator">Industrial Sewing machine operator</option>
-    <option value="Work study officer">Work study officer</option>
-  </select>
-<input type="submit" value=Search></form>
-
+<div class="form">
+<form action=_self name=post>
+Title: <br><br></tr><tr><input type="text" name="vaccancy" size="100%"><br><br>
+Description: <br><br><input type="text" name="vaccancy" size="100%" style="height:300px"><br><br>
+<input type="submit" value="Post"></form></div>
 </div>
 </body>
 </html>

@@ -5,7 +5,7 @@
 
 <head >
 
-	<title> Skill Directory-Company Vaccancy </title>
+	<title> Skill Directory-Company Search </title>
 	
 </head>
 
@@ -107,12 +107,18 @@
 	color: white;
 	cursor: pointer;
 	margin: 10px 12px;
-}
-.static {
+}.static {
     position: static;
-    border: 1px solid #000000;
-	background-color:#B0E0E6;
-	
+    border: 1px solid #87CEEB;
+	padding-left:10px;
+	margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+  
+} .form {
+    width: 100px;
+    margin: 10px 25% auto 25%;
 }
 </style>
 </head>
@@ -120,8 +126,10 @@
 <body>
 <!-- profile picture -->
 <div style="background-color:#87CEEB; padding:25px">
-<img style="float:left" src="user.png" width:"150" height:"150"><h3>Abc Co ltd</h3><br><br><br><br><br>
+<input type="file" name="" accept="image/*" capture>
+<br><br><br><br><br>
 </div>
+
 <!-- black row with buttons -->
 <div class="button">
 <button class="button" type="button">Profile</button>
@@ -130,12 +138,22 @@
 <button class="button" type="button">Logout</button>
 </div>
 
-<!-- input text area -->
+
+<!-- content area -->
 <div class="static">
-<form action=_self name=post>
-Title: <br></tr><tr><input type="text" name="vaccancy" size="100%" style="background-color:#6495ED"><br>
-Description: <br><input type="text" name="vaccancy" size="100%"style="background-color:	#6495ED"><br>
-<input type="submit" value="Post"></form>
+<div class="form">
+
+
+
+
+
+
+
+
+
+
+
+</div>
 </div>
 </body>
 </html>
