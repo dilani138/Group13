@@ -4,7 +4,6 @@
 <?php include("../../includes/main/header.php")?>
 <?php //include("../../sample/includes/navigation/n.php")?>
 
-	
 	<style>
 .button {
     background-color:#000000;
@@ -13,7 +12,8 @@
 	color: white;
 	cursor: pointer;
 	margin: 10px 12px;
-}.static {
+}
+.static {
     position: static;
     border: 1px solid #87CEEB;
 	padding-left:10px;
@@ -21,27 +21,19 @@
     margin-bottom: 100px;
     margin-right: 50px;
     margin-left: 50px;
-  
+	
 } .form {
-    
+    width: 100px;
     margin: 10px 25% auto 25%;
 }
 </style>
-
 </head>
 
 <body>
-<!-- define variables -->
-
-
-
-
 <!-- profile picture -->
 <div style="background-color:#87CEEB; padding:25px">
-<input type="file" name="" accept="image/*" capture>
-<br><br><br><br><br>
+<img style="float:left" src="user.png" width:"150" height:"150"><h3>Abc Co ltd</h3><br><br><br><br><br>
 </div>
-
 <!-- black row with buttons -->
 <div class="button">
 <a href="comprofile.php"><button class="button" type="button">Profile</button></a>
@@ -50,25 +42,14 @@
 <a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
-
-<!-- content area -->
+<!-- input text add vaccancy area -->
 <div class="static">
 <div class="form">
-<p style="font-size:150%">Company Profile </p>
-<form action="profileinfo.php" name=post>
-
-<table>
-<tr><td> Company Name:. $cname </td></tr>
-
-<tr><td> User Name:.$uname </td></tr>
-
-<tr><td>Address:. $add </td></tr>
-<tr><td>Telephone 1:. $tel1 </td></tr>
-<tr><td>Telephone 2: . $tel2 </td></tr>
-<tr><td>Fax: . $fax </td></tr>
-<tr><td>Description: . $desc </td></tr></table>
-<input type="submit" value="Edit Profile"></form></div>
-
+<form action="" name=post>
+Date: <br><br></tr><tr><input type="text" name="date" size="100%"><br><br>
+Title: <br><br></tr><tr><input type="text" name="vaccancy" size="100%"><br><br>
+Description: <br><br><input type="text" name="vaccancy" size="100%" style="height:300px"><br><br>
+<input type="submit" value="Publish"></form></div>
 </div>
 </body>
 </html>
