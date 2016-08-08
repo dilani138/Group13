@@ -1,7 +1,7 @@
 
 <!DOCTYPE HTML >
 
-<?php include("../../sample/includes/main/header.php")?>
+<?php include("../../includes/main/header.php")?>
 <?php //include("../../sample/includes/navigation/n.php")?>
 
 	<style>
@@ -32,7 +32,7 @@
 <body>
 <!-- profile picture -->
 <div style="background-color:#87CEEB; padding:25px">
-<img style="float:left" src="user.png" width:"150" height:"150"><h3>Abc Co ltd</h3><br><br><br><br><br>
+Abc Co ltd<br><br>
 </div>
 <!-- black row with buttons -->
 <div class="button">

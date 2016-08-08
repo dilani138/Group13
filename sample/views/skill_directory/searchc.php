@@ -29,8 +29,7 @@
 <body>
 <!-- profile picture -->
 <div style="background-color:#87CEEB; padding:25px">
-<input type="file" name="" accept="image/*" capture>
-<br><br><br><br><br>
+Abc Co ltd<br><br>
 </div>
 
 <!-- black row with buttons -->

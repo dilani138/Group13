@@ -30,11 +30,10 @@
 
 <body>
 <!-- profile picture -->
-<div style="background-color:#87CEEB; padding:25px">
-<input type="file" name="" accept="image/*" capture>
+<div style="background-color:#87CEEB; padding:25px"><div>
+</div>
 <br><br><br><br><br>
 </div>
-
 <!-- black row with buttons -->
 <div class="button">
 <a href="comprofile.php"><button class="button" type="button">Profile</button></a>
@@ -48,7 +47,7 @@
 <div class="static">
 <div class="form">
 <p style="font-size:150%">Edit your Company Profile Information here:</p>
-<form action="comprofile.php" name=post>
+<form action="comprofile.php" name=post enctype="multipart/form-data">
 <table>
 <tr><td> Company Name:</td><td> <input type="text" name="cname"></td></tr>
 
@@ -58,7 +57,10 @@
 <tr><td>Telephone 1:</td><td><input type="text" name="tel1"></td></tr>
 <tr><td>Telephone 2:</td><td> <input type="text" name="tel2"></td></tr>
 <tr><td>Fax:</td><td> <input type="text" name="fax"></td></tr>
-<tr><td>Description:</td><td><input type="text" name="desc"></td></tr></table>
+<tr><td>Description:</td><td><input type="text" name="desc"></td></tr>
+<tr><td>Profile Picture:</td><td><input type="file" name="propic" id="propic"></td></tr>
+
+</table>
 <input type="submit" value="Update" name="comupdate"></form></div>
 
 </div>
