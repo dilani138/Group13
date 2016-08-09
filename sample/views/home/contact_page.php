@@ -1,9 +1,27 @@
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+<script>
+	function initMap() {
+    
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv,{
+  		center: {lat: 44.540, lng: -78.546},
+  		zoom: 8
+		});
+
+		}
+
+  google.maps.event.addDomListener(window, 'load', initMap);
+	</script>
+
 <!-- |THIS IS contact PAGE| -->
 
 <!-- |OVERALL HEADER OF THE PAGE| -->
 <?php include("../../includes/main/header.php") ?>  <!-- |HEADER OF THE PAGE| -->
 <?php include("../../includes/navigations/nav_active_contact.php") ?>  <!-- |NAVIGATION OF THE PAGE| -->
-   
+
+
 <!-- |CONTENT OF THE PAGE| -->
    
 <div class="content">
@@ -56,8 +74,8 @@
 		<div class="col-c-1">
 			
 			<h1> Satellite Map </h1>
-
-			<img src="../../images/other/map.png" alt="Satellite Map" border="2px" class="" />
+			<div id="map" style="width:80%;height:300px;"></div>
+			
 
 		</div>
 	</div>
@@ -107,5 +125,10 @@
 	</div>
 </div>
 
+
+<!--div id="map" style="width:500px;height:380px;"></div-->
+
+</body>
 <!-- |FOOTER OF THE PAGE| -->
 <?php include("../../includes/main/footer.php") ?>
+</html>
