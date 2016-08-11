@@ -3,8 +3,10 @@
 
 <?php include("../../includes/main/header.php")?>
 <?php //include("../../sample/includes/navigation/n.php")?>
+<?php include ("databaseConnection.php")?>
 
-	<style>
+<head>
+<style>
 .button {
     background-color:#000000;
     text-align: center;
@@ -42,13 +44,44 @@ Abc Co ltd<br><br>
 <a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
+<?php
+$serverName="localhost";
+$userName="root";
+$password="123";
+$dbname="webmis";
+DatabaseConnection::connectDatabase($servername,$username,$password,$dbname); 
+
+if(isset($_POST['Publish'])){
+	$data=getPosts();
+	$insert_Query= "INSERT INTO vacancy(date,vacancy_name,details)
+	VALUES ('$data[1]','$data[2]','$data[3]')";
+	try{
+		$insert_Result=mysqli_query($insert_Query);
+		
+		if ($insert_Result){
+			
+			if(mysqli_affected_rows>0){
+				echo 'Vaccancy Published';
+			}else{
+				echo 'Vaccancy Not Published';
+			}
+		}
+				
+	} catch (Exception $ex){
+		echo 'Please Try again'.$ex->getMessage();
+		
+	}
+	
+}
+?>
+
 <!-- input text add vaccancy area -->
 <div class="static">
 <div class="form">
 <form action="" name=post>
 Date: <br><br></tr><tr><input type="text" name="date" size="100%"><br><br>
-Title: <br><br></tr><tr><input type="text" name="vaccancy" size="100%"><br><br>
-Description: <br><br><input type="text" name="vaccancy" size="100%" style="height:300px"><br><br>
+Title: <br><br></tr><tr><input type="text" name="vacancy_name" size="100%"><br><br>
+Description: <br><br><input type="text" name="details" size="100%" style="height:300px"><br><br>
 <input type="submit" value="Publish"></form></div>
 </div>
 </body>
