@@ -18,13 +18,13 @@ class DatabaseConnection
 	{
 		$connection = new mysqli($serverName, $userName, $password, $databaseName);
 		
-		if ($conn->connect_error) 
+		if ($connection->connect_error) 
 		{
 			throw new DatabaseErrorException("Error occur in database connection");
 		    die("Connection failed: " . $conn->connect_error);
 		}
 
 		return $connection;
-}
+	}
 }
 ?>
