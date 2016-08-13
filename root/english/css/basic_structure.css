@@ -1,0 +1,71 @@
+/*
+=========================================================================================
+|	* |BASIC STRUCTURING STYLES ARE STYLE HERE.											|
+|	* |THESE CLASSES CREATES THE COMMON STRUCTURE OF WEB PAGE.							|
+|	* |YOU CAN USE "LEFT" CLASS AND "RIGHT" CLASS WITHOUT STYLING.						|
+|	* |THEY ARE DEFAULT CLASSES.														|
+=========================================================================================
+*/
+
+
+/* |CONTAINER OF WHOLE PAGE| */
+.container{
+	width: 100%;
+	position: fixed;
+	background-color: #000000;
+}
+
+.clear {
+	clear: both;
+}
+
+.nav {
+	clear: both;
+	width: 100%;
+	position: relative;
+	line-height: 150%;
+	background-color: #000000;
+	border: 3px solid blue;
+}
+
+
+/* |HEADER CONTAINER| */
+.header::after {	
+    content: "";
+    clear: both;
+    display: block;
+    position: relative;
+}
+
+.navigation::after {		
+    content: "";
+    clear: both;
+    display: block;
+	position: relative;
+}
+
+
+/* |CONTENT CONTAINER| */
+.content::after {		
+    content: "";
+    clear: both;
+    display: block;
+    padding: 10px 50px 10px 50px;
+}
+
+
+
+/* |FOOTER CONTAINER| */
+.footer::after {
+	width: 100%;
+	height: 400px;
+	clear:both;
+	display: block;
+	 content: "";
+	padding: 10px 0px 10px 0px;
+	/*background-color: #397df7;*/
+	border-top: 4px solid #66ccff;
+	border-bottom: 4px solid #66ccff;
+}
+
+
