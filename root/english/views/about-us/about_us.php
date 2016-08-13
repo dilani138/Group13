@@ -10,7 +10,7 @@
     <div class="content">
         <div class= "col-b-1 " >    
         <div class= "col-c-1 " >
-            <h2> About Us </h2>
+            <h2> Who We Are </h2>
 
             <p>            
                 The Vocational Training Authority of Sri Lanka(VTA) was established on 16th August 1995 under the provisions of the Vocational Training Authority of Sri Lanka Act No.12 of 1995.It was a concept of His Excellency the President Mahinda Rajapaksa when he was the Hon. Ministry of Labor and Vocational Training. The VTA was established with the intent of skilling you for employment Manpower Division-the training arm of Labor Department that was running Technical and Vocational Education and training programs in many parts of Sri Lanka, Was converted to the newly constitute Vocational Training Authority making vocational training more accessible to rural youth and depressed segments of the country.
@@ -78,7 +78,7 @@
 
         <div class= "col-b-1 " >
         <div class= "col-c-1 " >
-            <h2> Functions </h2s>
+            <h2> Functions </h2>
             <ul class="cont">
                 <li><i class= "fa fa-gears" style="color:#00cc00;"></i> &nbsp Provide vocational training to students by drawing up vocational training programs and coordinate with other institutions.</li>
                 <li><i class= "fa fa-gears" style="color:#00cc00;"></i> &nbsp Conduct trade tests, final assessments and issuing National Vocational Qualification certificates through TVEC.</li>

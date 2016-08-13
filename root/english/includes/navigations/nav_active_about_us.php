@@ -43,14 +43,14 @@
 
 				</li>
 				
-				<li> <a href="../../views/skill-directory/login_page.php.php"> Skill Directory </a> </li><!-- SKILL DIRECTORY PAGE -->
+				<li> <a href="../../views/skill-directory/login_page.php"> Skill Directory </a> </li><!-- SKILL DIRECTORY PAGE -->
 			
 				<li> <a href="../../views/search/search.php"> <i class= "fa fa-search fa-lg " ></i> &nbsp Search  </a> </li> <!-- SEARCH PAGE -->
 				<li> <a href="../../views/apply-on-line/on-line-application.php"> Apply On-line </a> </li> <!-- APPLY ON LINE PAGE -->
 				
 				<li> <a href="../../views/contact/contact_page.php"> Contact </a> </li><!-- CONTACT PAGE -->
 				
-				<li> <a href="../../views/skill_directory/profiles/login_page.php"> <i class= "fa fa-user fa-lg " ></i>&nbsp Profiles </a> </li> <!-- PROFILES PAGE -->
+				<li> <a href="../../views/skill-directory/login_page.php"> <i class= "fa fa-user fa-lg " ></i>&nbsp Profiles </a> </li> <!-- PROFILES PAGE -->
 				
 				<li> <a href="../../views/home/faqs.php"> FAQs </a> </li> <!-- FAQS PAGE -->
 				
