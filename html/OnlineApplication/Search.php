@@ -1,4 +1,47 @@
+
+
 <?php include("../includes/new_main_header.php");?>
+<?php include("../../sample/includes/database/databaseConnection.php"); ?>
+
+
+
+<?php 
+$severName = "localhost";
+$userName = "root";
+$password = "£5shashika5£";
+$databaseName = "webmis";
+
+
+
+
+try {
+    $connection = DatabaseConnectionPDO::connectDatabase($severName,$userName,$password,$databaseName);
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $connection->prepare("SELECT * FROM course");
+    
+    $stmt->execute();
+
+    
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result1 = $stmt->fetchAll();
+
+     foreach($result1 as $row)
+        {
+        echo $row['course_id'].'-'.$row['course_name'].'-'.$row['nvq_level'];
+        }
+    
+}
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+/*try{
+
+	$connection = DatabaseConnection::connectDatabase($severName,$userName,$password,$databaseName); 
+}catch(PDOException $e)
+{
+	echo "error";
+}*/
+?>
 
 <br></br>
 <table cellspacing="10" align="center">
