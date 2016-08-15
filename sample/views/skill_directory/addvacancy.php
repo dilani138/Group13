@@ -3,7 +3,6 @@
 
 <?php include("../../includes/main/header.php")?>
 <?php //include("../../sample/includes/navigation/n.php")?>
-<?php include ("databaseConnection.php")?>
 
 <head>
 <style>
@@ -44,34 +43,38 @@ Abc Co ltd<br><br>
 <a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
-<?php
-$serverName="localhost";
-$userName="root";
-$password="123";
-$dbname="webmis";
-DatabaseConnection::connectDatabase($servername,$username,$password,$dbname); 
 
-if(isset($_POST['Publish'])){
-	$data=getPosts();
-	$insert_Query= "INSERT INTO vacancy(date,vacancy_name,details)
-	VALUES ('$data[1]','$data[2]','$data[3]')";
-	try{
-		$insert_Result=mysqli_query($insert_Query);
-		
-		if ($insert_Result){
+
+<?php
+$severName = "localhost";
+$userName = "root";
+$password = "123";
+$databaseName = "webmis";
+
+if(isset($_POST['Publish']))
+{ require ("databaseConnection.php");
+    try {
+
+        // connect to mysql
+
+        $connection = DatabaseConnectionPDO::connectDatabase($severName,$userName,$password,$databaseName);
+		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+     		
 			
-			if(mysqli_affected_rows>0){
-				echo 'Vaccancy Published';
-			}else{
-				echo 'Vaccancy Not Published';
-			}
-		}
-				
-	} catch (Exception $ex){
-		echo 'Please Try again'.$ex->getMessage();
-		
-	}
+		$query = "INSERT INTO vacancy (date, vacancy_name, details) VALUES
+	VALUES ('".$_POST["date"]."','".$_POST["vacancy_name"]."','".$_POST["details"]."')";
+	$stmt = $connection->prepare($query);
+
+if ($stmt->execute()){
+echo "<script type= 'text/javascript'>alert('New vacancy Inserted Successfully');</script>";
+}
+else{
+echo "<script type= 'text/javascript'>alert('vacancy not successfully Inserted.');</script>";
+}
 	
+} catch(Exception $e) {
+	echo "Error: " . $e->getMessage();
+}
 }
 ?>
 
@@ -79,9 +82,9 @@ if(isset($_POST['Publish'])){
 <div class="static">
 <div class="form">
 <form action="" name=post>
-Date: <br><br></tr><tr><input type="text" name="date" size="100%"><br><br>
-Title: <br><br></tr><tr><input type="text" name="vacancy_name" size="100%"><br><br>
-Description: <br><br><input type="text" name="details" size="100%" style="height:300px"><br><br>
+Date: <br><br></tr><tr><input type="text" name="date" size="100%" required><br><br>
+Title: <br><br></tr><tr><input type="text" name="vacancy_name" size="100%" required><br><br>
+Description: <br><br><input type="text" name="details" size="100%" style="height:300px" required><br><br>
 <input type="submit" value="Publish"></form></div>
 </div>
 </body>
@@ -98,6 +101,6 @@ Description: <br><br><input type="text" name="details" size="100%" style="height
 </div>
 
 </body>
-
+<?php } ?>
 </html>
 

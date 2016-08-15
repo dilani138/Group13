@@ -42,12 +42,15 @@
 <a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
+
+
+
 <?php
-$servername="localhost";
-$username="root";
+$serverName="localhost";
+$userName="root";
 $password="123";
-$dbname="webmis";
-DatabaseConnection::connectDatabase($servername,$username,$password,$dbname); ?>
+$databaseName="webmis";
+DatabaseConnection::connectDatabase($serverName,$userName,$password,$databaseName); ?>
 
 if(isset($_POST['Update'])){ 
 $company_id = $_POST['company_id'];

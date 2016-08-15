@@ -2,6 +2,7 @@
 
 <?php include("../../includes/main/header.php")?>
 <?php //include("../../sample/includes/navigation/n.php")?>
+<?php include ("databaseConnection.php")?>
 
 	
 	<style>
@@ -41,11 +42,67 @@ Abc Co ltd<br><br>
 </div>
 
 
+<?php
+$severName = "localhost";
+$userName = "root";
+$password = "123";
+$databaseName = "webmis";
+
+// set data in input text
+$sname="";
+
+
+if(isset($_POST['Search By Name']))
+{
+    try {
+
+        // connect to mysql
+
+        $connection = DatabaseConnectionPDO::connectDatabase($severName,$userName,$password,$databaseName);
+		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } 		
+		catch (Exception $ex){
+		echo 'Please Try again'.$ex->getMessage();
+    }
+	// id to search
+    $sname = $_POST['sname'];
+    
+     // mysql search query
+    $pdoQuery = "SELECT * FROM 'graduates' WHERE 'first_name' = :sname OR 'last_name'= :sname";
+    
+    $pdoResult = $connection->prepare($pdoQuery);
+    
+    //set your id to the query id
+    $pdoExec = $pdoResult->execute(array(":sname"=>$sname));
+    
+    if($pdoExec)
+    {
+            // if id exist 
+            // show data in inputs
+        if($pdoResult->rowCount()>0)
+        {
+            	
+			echo"found 1 rcord";
+            }
+        }
+            // if the id not exist
+            // show a message and clear inputs
+        else{
+            echo 'No Graduates avalable With This Name';
+        }
+		// if the placeholder is empty
+    }else{
+        echo 'ERROR Student name is not Not Inserted to search';
+		}	
+}
+
+?>
+
 <!-- content area -->
 <div class="static">
 <form action="" target=_self name=post>
 <input type="textbox" name=sname placeholder="Type Student Name" size="28"> 
-<input type="submit" value=Search><br><br>
+<input type="submit" value="Search By Name"><br><br>
 <select name="scourse">
     <option value="">Select course</option>
     <option value="Baker">Baker</option>
@@ -63,9 +120,6 @@ Abc Co ltd<br><br>
 </body>
 </html>
 
-
-	
-	
 </div>
 
 </body>
