@@ -2,7 +2,7 @@
 
 <?php include("../../includes/main/header.php")?>
 <?php //include("../../sample/includes/navigation/n.php")?>
-<?php include ("databaseConnection.php")?>
+
 	
 	<style>
 .button {
@@ -50,7 +50,8 @@ $serverName="localhost";
 $userName="root";
 $password="123";
 $databaseName="webmis";
-DatabaseConnection::connectDatabase($serverName,$userName,$password,$databaseName); ?>
+require ("databaseConnection.php");
+DatabaseConnection::connectDatabase($serverName,$userName,$password,$databaseName);
 
 if(isset($_POST['Update'])){ 
 $company_id = $_POST['company_id'];
@@ -62,7 +63,6 @@ $telephone_02 = $_POST['telephone_02'];
 $fax = $_POST['fax'];
 $email = $_POST['email'];
 $details = $_POST['details'];
-if($user_name !=''||$email !=''){
 
 $query = "UPDATE 'company' SET 'name'= :name,'user_name'= :user_name,'address'= :address,'telephone_01'= :telephone_01,'telephone_02'= :telephone_02,
  'fax'= :fax,'email'= :email,'details'= :details WHERE 'company_id'= :company_id";
@@ -74,7 +74,7 @@ else{
 echo "<p>updation Failed <br/> Some Fields are Blank!</p>";
 }
 }
-mysql_close();
+exit();
 ?>
 
 <!-- content area -->
@@ -84,13 +84,13 @@ mysql_close();
 <form action="profileinfo.php" name=post enctype="multipart/form-data">
 <table>
 <tr><td> Company ID:</td><td> <input type="text" name="company_id"></td></tr>
-<tr><td> Company Name:</td><td> <input type="text" name="name"></td></tr>
-<tr><td> User Name:</td><td> <input type="text" name="user_name"></td></tr>
+<tr><td> Company Name:</td><td> <input type="text" name="name" Required></td></tr>
+<tr><td> User Name:</td><td> <input type="text" name="user_name" Required></td></tr>
 <tr><td>Address:</td><td><input type="text" name="address"></td></tr>
-<tr><td>Telephone 1:</td><td><input type="text" name="telephone_01"></td></tr>
+<tr><td>Telephone 1:</td><td><input type="text" name="telephone_01" Required></td></tr>
 <tr><td>Telephone 2:</td><td> <input type="text" name="telephone_02"></td></tr>
 <tr><td>Fax:</td><td> <input type="text" name="fax"></td></tr>
-<tr><td>E-mail:</td><td> <input type="text" name="email"></td></tr>
+<tr><td>E-mail:</td><td> <input type="text" name="email" Required></td></tr>
 <tr><td>Description:</td><td><input type="text" name="details"></td></tr>
 <tr><td>Profile Picture:</td><td><input type="file" name="propic"></td></tr>
 </table>
