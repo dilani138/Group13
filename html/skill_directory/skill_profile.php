@@ -3,7 +3,7 @@
 <div style="background-color:lightcyan; color:black; padding:15px; ">
 
 <h1 style="text-align:center;">student name</h1>
-<img src="linux.jpg"  style="width:100px;height:100px;">
+<img src="user.jpg"  style="width:100px;height:100px;">
 
 
 </div>
