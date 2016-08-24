@@ -57,15 +57,14 @@
 <form action="profileinfo.php" name=post>
 
 <table>
-<tr><td> Company Name:. $cname </td></tr>
-
+<tr><td> Company Name:. $name </td></tr>
 <tr><td> User Name:.$uname </td></tr>
 
 <tr><td>Address:. $add </td></tr>
 <tr><td>Telephone 1:. $tel1 </td></tr>
 <tr><td>Telephone 2: . $tel2 </td></tr>
 <tr><td>Fax: . $fax </td></tr>
-<tr><td>Description: . $desc </td></tr></table>
+<tr><td>Description: $desc </td></tr></table>
 <input type="submit" value="Edit Profile"></form></div>
 
 </div>

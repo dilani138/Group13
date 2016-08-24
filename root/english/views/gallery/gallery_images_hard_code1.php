@@ -69,7 +69,7 @@
      
   
   <?php }
-    closedir($dir);
+    //closedir($dir);
   ?>
       </tr>
     </table>
