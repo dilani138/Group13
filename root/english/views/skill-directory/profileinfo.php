@@ -1,7 +1,31 @@
 <!DOCTYPE HTML >
 
-<?php include("../../includes/main/header.php")?>
-<?php //include("../../sample/includes/navigation/n.php")?>
+<?php include("../../includes/main/header.php");
+	  include("../../includes/navigations/nav_active_skill_directory.php");
+
+?>
+
+<?php include("company_database_classes.php"); ?>
+<?php 
+	
+	session_start();
+	
+	if(isset($_GET["company"]))
+	{
+		$companyID = $_GET["company"];
+		//echo $companyID;
+		$result =SkillDirectoryCompany::getCompanyDetailsByCompanyID($companyID);
+	}else
+	{
+		SkillDirectoryCompany::redirect_to("login_page.php");
+	}
+
+	if(isset($_SESSION["editCompanyMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["editCompanyMessage"]."')</script>";
+    	$_SESSION["editCompanyMessage"] =null;
+	}
+?>
 
 	
 	<style>
@@ -44,26 +68,28 @@
 
 
 <!-- content area -->
-<div class="static">
-<div class="form">
-<p style="font-size:150%">Edit your Company Profile Information here:</p>
-<form action="comprofile.php" name=post enctype="multipart/form-data">
-<table>
-<tr><td> Company Name:</td><td> <input type="text" name="cname"></td></tr>
+	<div class="static">
+		<div class="form">
+		<p style="font-size:150%">Edit your Company Profile Information here:</p>
+			<form action="updateCompany.php" method="post" >
+				<table>
+					<tr><td> Company Name:</td><td> <input type="text" name="cname" value=<?php echo $result[0]['name'];?>></td></tr>
 
-<tr><td> User Name:</td><td> <input type="text" name="uname"></td></tr>
+					<tr><td> User Name:</td><td> <input type="text" name="uname"  value=<?php echo $result[0]['user_name'];?>></td></tr>
+					<tr><td>Email Address:</td><td><input type="text" name="email"  value=<?php echo $result[0]['email'];?>></td></tr>
+					<tr><td>Address:</td><td><input type="text" name="address"  value=<?php echo $result[0]['address'];?>></td></tr>
+					<tr><td>Telephone 1:</td><td><input type="text" name="tel1"  value=<?php echo $result[0]['telephone_01'];?>></td></tr>
+					<tr><td>Telephone 2:</td><td> <input type="text" name="tel2" value=<?php echo $result[0]['telephone_02'];?>></td></tr>
+					<tr><td>Fax:</td><td> <input type="text" name="fax" value=<?php echo $result[0]['fax'];?>></td></tr>
+					<tr><td>Description:</td><td><input type="text" name="desc" value=<?php echo $result[0]['details'];?> ></td></tr>
+					<tr><td>Profile Picture:</td><td><input type="file" name="propic" id="propic"></td></tr>
 
-<tr><td>Address:</td><td><input type="text" name="address"></td></tr>
-<tr><td>Telephone 1:</td><td><input type="text" name="tel1"></td></tr>
-<tr><td>Telephone 2:</td><td> <input type="text" name="tel2"></td></tr>
-<tr><td>Fax:</td><td> <input type="text" name="fax"></td></tr>
-<tr><td>Description:</td><td><input type="text" name="desc"></td></tr>
-<tr><td>Profile Picture:</td><td><input type="file" name="propic" id="propic"></td></tr>
+				</table>
+			<input type="submit" value="Update" name="companyUpdate">
+		</form>
+		</div>
 
-</table>
-<input type="submit" value="Update" name="comupdate"></form></div>
-
-</div>
+	</div>
 </body>
 </html>
 

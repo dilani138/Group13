@@ -1,7 +1,10 @@
 <!DOCTYPE HTML >
 
-<?php include("../../includes/main/header.php")?>
-<?php //include("../../sample/includes/navigation/n.php")?>
+<?php 
+	include("../../includes/main/header.php");
+	include("../../includes/navigations/nav_active_skill_directory.php");
+	?>
+
 <?php include("company_database_classes.php"); ?>
 
 <?php 
@@ -9,14 +12,7 @@
 	$resultArray = SkillDirectoryCompany::getVacancyDetails($_SESSION["mainID"]);
 	$rows = $resultArray[1];
 	$result = $resultArray[0];
-	//$stmt->execute($_SESSION["mainID"]);
-	//$result1 = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-	//$result2 = $stmt->fetchAll();
-	//$rows = $stmt->rowCount();
-	//echo $rows;
-	//print_r($stmt);
-	//echo $result2[0]['vacancy_name'];
-
+	
 ?>
 
 	
@@ -70,6 +66,20 @@ Abc Co ltd<br><br>
 <a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
+<?php 
+	session_start();
+	if(isset($_SESSION["vacancyEditMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["vacancyEditMessage"]."')</script>";
+    	$_SESSION["vacancyEditMessage"] =null;
+	}
+
+	if(isset($_SESSION["deleteMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["deleteMessage"]."')</script>";
+    	$_SESSION["deleteMessage"] =null;
+	}
+?>	
 
 <!-- content area -->
 
@@ -88,7 +98,7 @@ Abc Co ltd<br><br>
 </div>
 
 	<div id="vacancyContainer">
-		<form action="deleteVacancyQuery.php"  method="post">
+		
 		<?php
 			for($i=0;$i<$rows;$i++)
 			{
@@ -96,27 +106,14 @@ Abc Co ltd<br><br>
 				echo "Vacancy Name : ".$result[$i]['vacancy_name']."<br>";
 				echo "Date : ".$result[$i]['date']."<br>";
 				echo "Detais : ".$result[$i]['details']."<br>";
-				echo "<input type=\"submit\"  name=".$result[$i]['vacancy_id']." value=\"delete\" >";
+				echo "<a href=editVacancy.php?vacancy=".$result[$i]['vacancy_id'].">Edit Vacancy</a>";
 				echo "</div>";
 			}
 
 		?>
-	</form>
+
 	</div>
 </body>
 </html>
 
-</head>
-<body>
-</body>
-</html>
-
-
-	
-	
-</div>
-
-</body>
-
-</html>
 
