@@ -83,6 +83,32 @@
 			}
 		}
 
+		//get company details by company id
+		public static function getCompanyDetailsByCompanyID($companyID)
+		{
+			
+			try
+			{
+				//echo $userNameCompany;
+				$connection1 = $GLOBALS['connection'];
+				$stmt1 = $connection1->prepare("SELECT * FROM company WHERE company_id=?");
+				//echo "2";
+				//$stmt->bindParam(':user_name', $userNameCompany);
+    			$stmt1->execute([$companyID]);
+
+			    
+			    $result2 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+			    $result3 = $stmt1->fetchAll();
+			    return $result3;
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return null;
+
+			}
+		}
+
+
 		//get vacancy details by company id
 		public static function getVacancyDetails($companyID)
 		{
@@ -145,14 +171,15 @@
 				$connection1 = $GLOBALS['connection'];
 				$stmt = $connection1->prepare("UPDATE vacancy SET vacancy_name=:vacancyName,date=:vacancyDate,details=:vacancyDetails WHERE vacancy_id=:vacancyID");
 				$stmt->bindParam(':vacancyName', $vacancyName);
-				$stmt->bindParam(':vacancyDate', $vacancyDame);
+				$stmt->bindParam(':vacancyDate', $vacancyDate);
 				$stmt->bindParam(':vacancyDetails', $vacancyDetails);
 				$stmt->bindParam(':vacancyID', $vacancyID);
     			$stmt->execute();
 
 			    $result1 = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-				$result2 = $stmt->fetchAll();
+				//$result2 = $stmt->fetchAll();
 				$rows = $stmt->rowCount();
+				echo "<br/>"."my roe : ".$rows;
 			    
 			    if($rows == 1)
 			    {
@@ -197,6 +224,76 @@
 			{
 				echo "Connection failed: " . $e->getMessage();
 				return false;
+
+			}
+		}
+
+		//delete vacancy by vacancy id
+		public static function deleteVacancy($vacancyID)
+		{
+			
+			try
+			{
+				//echo $userNameCompany;
+				$connection1 = $GLOBALS['connection'];
+				$stmt1 = $connection1->prepare("DELETE FROM vacancy WHERE vacancy_id=?");
+				//echo "2";
+				//$stmt->bindParam(':user_name', $userNameCompany);
+    			$stmt1->execute([$vacancyID]);
+
+			    $result1 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+				//$result2 = $stmt1->fetchAll();
+				$rows = $stmt1->rowCount();
+			    
+			    if($rows ==1)
+			    	return true;
+			    else
+			    	return false;
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return false;
+
+			}
+		}
+
+		//edit company
+		public static function editCompany($companyID,$userName,$name,$email,$tp1,$tp2,$address,$fax,$details)
+		{
+			
+			try
+			{
+				//echo $userNameCompany;
+				$connection1 = $GLOBALS['connection'];
+				$stmt = $connection1->prepare("UPDATE company SET user_name=:userName,name=:name,email=:email,telephone_01=:tp1,telephone_02=:tp2,address=:address,fax=:fax,details=:details WHERE company_id=:companyID");
+				$stmt->bindParam(':userName', $userName);
+				$stmt->bindParam(':name', $name);
+				$stmt->bindParam(':email', $email);
+				$stmt->bindParam(':tp1', $tp1);
+				$stmt->bindParam(':tp2', $tp2);
+				$stmt->bindParam(':fax', $fax);
+				$stmt->bindParam(':address', $address);
+				$stmt->bindParam(':details', $details);
+				$stmt->bindParam(':companyID', $companyID);
+    			$stmt->execute();
+
+			    $result1 = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+				//$result2 = $stmt->fetchAll();
+				$rows = $stmt->rowCount();
+				echo "<br/>"."my roe : ".$rows;
+			    
+			    if($rows == 1)
+			    {
+			    	return true;
+
+			    }else
+			    {
+			    	return false;
+			    }
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return null;
 
 			}
 		}

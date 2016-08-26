@@ -66,6 +66,20 @@ Abc Co ltd<br><br>
 <a href=""><button class="button" type="button">Logout</button></a>
 </div>
 
+<?php 
+	session_start();
+	if(isset($_SESSION["vacancyEditMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["vacancyEditMessage"]."')</script>";
+    	$_SESSION["vacancyEditMessage"] =null;
+	}
+
+	if(isset($_SESSION["deleteMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["deleteMessage"]."')</script>";
+    	$_SESSION["deleteMessage"] =null;
+	}
+?>	
 
 <!-- content area -->
 

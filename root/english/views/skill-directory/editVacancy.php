@@ -4,7 +4,21 @@
 	?>
 
 <?php include("company_database_classes.php"); ?>
-	
+
+<?php 
+	session_start();
+	if(isset($_SESSION["vacancyEditMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["vacancyEditMessage"]."')</script>";
+    	$_SESSION["vacancyEditMessage"] =null;
+	}
+
+	if(isset($_SESSION["deleteMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["deleteMessage"]."')</script>";
+    	$_SESSION["deleteMessage"] =null;
+	}
+?>	
 
 <?php
 	$vacancyID =$_GET['vacancy'];
@@ -21,6 +35,6 @@
 	<input type="submit" value="Edit Vacancy" name="editVacancy">
 </form>
 
-
+<a onClick="javascript: return confirm('Please confirm deletion')" href=deleteVacancy.php?vacancy=<?php echo $vacancyID; ?>>Delete Vacancy</a>
 </body>
 </html>

@@ -32,7 +32,7 @@ class DatabaseConnectionPDO
 			
 		    $conn = new PDO("mysql:host=$serverName;dbname=$databaseName", $userName, $password);
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		    echo "Connected successfully";
+		    //echo "Connected successfully";
 		    return $conn;
 		}
 		catch(PDOException $e)
