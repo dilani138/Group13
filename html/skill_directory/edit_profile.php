@@ -44,15 +44,13 @@
 <p style="font-size:150%">Edit your Profile Information here!</p>
 <form action="skill_profile.php" name=post>
 <table>
-<tr><td> Student Name:</td><td> <input type="text" name="sname"></td></tr>
-
-<tr><td> User Name:</td><td> <input type="text" name="uname"></td></tr>
-
-<tr><td>Address:</td><td><input type="text" name="address"></td></tr>
-
-<tr><td>Telephone:</td><td> <input type="text" name="tel"></td></tr>
-<tr><td>Email:</td><td> <input type="text" name="email"></td></tr>
-<tr><td>Qualifications:</td><td><input type="text" name="qua"></td></tr></table>
+	<tr><td> First Name:</td><td> <input type="text" name="sname1"></td></tr>
+	<tr><td> Last Name:</td><td> <input type="text" name="sname2"></td></tr>
+	<tr><td> User Name:</td><td> <input type="text" name="uname"></td></tr>
+	<tr><td>Address:</td><td><input type="text" name="address"></td></tr>
+	<tr><td>Telephone:</td><td> <input type="text" name="tel"></td></tr>
+	<tr><td>Email:</td><td> <input type="text" name="email"></td></tr>
+	<tr><td>Qualifications:</td><td><input type="text" name="qua"></td></tr></table>
 <input type="submit" value="Update" name="studentupdate">
 </form>
 <form action="password_change.php" name=post>

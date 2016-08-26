@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML >
 
 <?php include("../../includes/main/header.php")?>
@@ -22,24 +21,16 @@
     margin-right: 50px;
     margin-left: 50px;
   
-} .form {
-    
-    margin: 10px 25% auto 25%;
 }
-</style>
 
+</style>
 </head>
 
 <body>
-<!-- define variables -->
-
-
-
-
 <!-- profile picture -->
-<div style="background-color:#87CEEB; padding:25px">
-<p>UPDATED PROFILE PIC APPEAR HERE</p><br><br><br><br>
-</div>
+<!--div style="background-color:#87CEEB; padding:25px">
+Abc Co ltd<br><br>
+</div-->
 
 <!-- black row with buttons -->
 <div class="button">
@@ -52,21 +43,16 @@
 
 <!-- content area -->
 <div class="static">
-<div class="form">
-<p style="font-size:150%">Company Profile </p>
-<form action="profileinfo.php" name=post>
-
-<table>
-<tr><td> Company Name:. $cname </td></tr>
-
-<tr><td> User Name:.$uname </td></tr>
-
-<tr><td>Address:. $add </td></tr>
-<tr><td>Telephone 1:. $tel1 </td></tr>
-<tr><td>Telephone 2: . $tel2 </td></tr>
-<tr><td>Fax: . $fax </td></tr>
-<tr><td>Description: . $desc </td></tr></table>
-<input type="submit" value="Edit Profile"></form></div>
+<form action="" target=_self name=post>
+<input type="textbox" name=sname placeholder="Type Student Name" size="28"> 
+<input type="submit" value=Search><br><br>
+<select name="scourse">
+    <option value="">Select course</option>
+    <option value="Baker">Baker</option>
+    <option value="Industrial Sewing machine operator">Industrial Sewing machine operator</option>
+    <option value="Work study officer">Work study officer</option>
+  </select>
+<input type="submit" value=Search></form>
 
 </div>
 </body>

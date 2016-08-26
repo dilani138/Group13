@@ -1,4 +1,5 @@
-
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVBPIjIDUkpPxXiMGv7wPt-85ceFr4-Kk&callback=initMap"
+  type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
 <script>
@@ -6,7 +7,7 @@
     
 		var mapDiv = document.getElementById('map');
 		var map = new google.maps.Map(mapDiv,{
-  		center: {lat: 44.540, lng: -78.546},
+  		center: {lat: 6.897593, lng: 79.881483},
   		zoom: 8
 		});
 

@@ -45,8 +45,8 @@
 <form action="edit_profile.php" name=post>
 
 <table>
-<tr><td> Student Name: $sname </td></tr>
-
+<tr><td> First Name: $sname1 </td></tr>
+<tr><td> Last Name: $sname2 </td></tr>
 <tr><td> User Name:$uname </td></tr>
 
 <tr><td>Address: $add </td></tr>

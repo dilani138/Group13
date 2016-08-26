@@ -1,0 +1,4 @@
+insert into company(user_name,password,name,registration_date,email,telephone_01,telephone_02,address,fax,details) values('testCompany','123','test',2016-1-1,'test@gmail.com',0777123456,0777123456,'test Address',0777123456,'test details');
+
+
+insert into vacancy(vacancy_name,company_id,date,details) values ('test_vacancy1',1,2016-8-19,'vacancy details 01');

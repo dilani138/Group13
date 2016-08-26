@@ -3,7 +3,7 @@
 <div style="background-color:lightcyan; color:black; padding:15px; ">
 
 <h1 style="text-align:center;">student name</h1>
-<img src="linux.jpg"  style="width:100px;height:100px;">
+<img src="user.jpg"  style="width:100px;height:100px;">
 
 
 </div>
@@ -45,8 +45,8 @@
 <form action="edit_profile.php" name=post>
 
 <table>
-<tr><td> Student Name: $sname </td></tr>
-
+<tr><td> First Name: $sname1 </td></tr>
+<tr><td> Last Name: $sname2 </td></tr>
 <tr><td> User Name:$uname </td></tr>
 
 <tr><td>Address: $add </td></tr>

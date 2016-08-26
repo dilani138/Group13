@@ -2,6 +2,22 @@
 
 <?php include("../../includes/main/header.php")?>
 <?php //include("../../sample/includes/navigation/n.php")?>
+<?php include("company_database_classes.php"); ?>
+
+<?php 
+	session_start();
+	$resultArray = SkillDirectoryCompany::getVacancyDetails($_SESSION["mainID"]);
+	$rows = $resultArray[1];
+	$result = $resultArray[0];
+	//$stmt->execute($_SESSION["mainID"]);
+	//$result1 = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+	//$result2 = $stmt->fetchAll();
+	//$rows = $stmt->rowCount();
+	//echo $rows;
+	//print_r($stmt);
+	//echo $result2[0]['vacancy_name'];
+
+?>
 
 	
 	<style>
@@ -25,14 +41,26 @@
     width: 100px;
     margin: 10px 25% auto 25%;
 }
+
+#vacancyContainer{
+	width:100%;
+	
+	
+}
+
+#vacancy{
+	width:100%;
+	height:200px;
+	
+}
 </style>
 </head>
 
 <body>
 <!-- profile picture -->
-<div style="background-color:#87CEEB; padding:25px">
+<!--div style="background-color:#87CEEB; padding:25px">
 Abc Co ltd<br><br>
-</div>
+</div-->
 
 <!-- black row with buttons -->
 <div class="button">
@@ -58,6 +86,23 @@ Abc Co ltd<br><br>
 <form action="addvacancy.php" name=post>
 <input type="submit" value="Add Vacancy"></form></div>
 </div>
+
+	<div id="vacancyContainer">
+		<form action="deleteVacancyQuery.php"  method="post">
+		<?php
+			for($i=0;$i<$rows;$i++)
+			{
+				echo "<div id= vacancy>";
+				echo "Vacancy Name : ".$result[$i]['vacancy_name']."<br>";
+				echo "Date : ".$result[$i]['date']."<br>";
+				echo "Detais : ".$result[$i]['details']."<br>";
+				echo "<input type=\"submit\"  name=".$result[$i]['vacancy_id']." value=\"delete\" >";
+				echo "</div>";
+			}
+
+		?>
+	</form>
+	</div>
 </body>
 </html>
 
