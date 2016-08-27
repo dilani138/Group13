@@ -14,25 +14,24 @@
 	class SkillDirectoryStudent
 	{
 
-		public static function updateInfo($userNameCompany,$passwordCompany)
+		//validate student access by user name and password
+		public static function validateStudentAccess($userNameStudent,$passwordStudent)
 		{
-			//echo "1";
+			
 			try
 			{
-				//echo $userNameCompany;
+				
 				$connection = $GLOBALS['connection'];
-				$stmt = $connection->prepare("SELECT * FROM company WHERE user_name=? AND password=?" );
-				//echo "2";
-				//$stmt->bindParam(':user_name', $userNameCompany);
+				$stmt = $connection->prepare("SELECT * FROM graduates WHERE user_name=?");
     			$stmt->execute([$userNameCompany]);
 
 			    
 			    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 			    $result1 = $stmt->fetchAll();
-			    //echo $result1[0]['password'];
-			    if(intval($result1[0]['password'])==intval($passwordCompany))
+			    
+			    if(intval($result1[0]['password'])==intval($passwordStudent))
 			    {
-			    	//echo "1";
+			    	
 			    	return true;
 			    }else
 			    {
@@ -47,25 +46,25 @@
 			}
 
 		}
-
+		
+		//redirect function 
 		public static function redirect_to($new_location)
 		{
 			header("Location: ".$new_location);
 			exit;
 		}
-
-
-		public static function getCompanyDetails($userNameCompany)
+		
+		//get student details by student user name
+		public static function getStudentDetails($userNameStudent)
 		{
 			
 			try
 			{
-				//echo $userNameCompany;
+				
 				$connection1 = $GLOBALS['connection'];
-				$stmt1 = $connection1->prepare("SELECT * FROM company WHERE user_name=?");
-				//echo "2";
-				//$stmt->bindParam(':user_name', $userNameCompany);
-    			$stmt1->execute([$userNameCompany]);
+				$stmt1 = $connection1->prepare("SELECT * FROM graduates WHERE user_name=?");
+				
+    			$stmt1->execute([$userNameStudent]);
 
 			    
 			    $result2 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
@@ -79,6 +78,31 @@
 			}
 		}
 
+		//get student details by student id
+		public static function getStudentDetailsByStudentID($studentID)
+		{
+			
+			try
+			{
+				
+				$connection1 = $GLOBALS['connection'];
+				$stmt1 = $connection1->prepare("SELECT * FROM graduates WHERE student_id=?");
+				
+    			$stmt1->execute([$studentID]);
+
+			    
+			    $result2 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+			    $result3 = $stmt1->fetchAll();
+			    return $result3;
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return null;
+
+			}
+		}
+		
+		//get vacancy details by company id
 		public static function getVacancyDetails($companyID)
 		{
 			
@@ -87,8 +111,7 @@
 				//echo $userNameCompany;
 				$connection1 = $GLOBALS['connection'];
 				$stmt1 = $connection1->prepare("SELECT * FROM vacancy WHERE company_id=?");
-				//echo "2";
-				//$stmt->bindParam(':user_name', $userNameCompany);
+				
     			$stmt1->execute([$companyID]);
 
 			    $result1 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
@@ -104,32 +127,69 @@
 			}
 		}
 
-		public static function addVacancyDatabase($name,$companyID,$date,$details)
+		//get vacancy details by vacancy id
+		public static function getVacancyDetailsByVacancyID($vacancyID)
 		{
 			
 			try
 			{
 				//echo $userNameCompany;
 				$connection1 = $GLOBALS['connection'];
-				$stmt = $connection1->prepare("INSERT INTO vacancy(vacancy_name,company_id,date,details) VALUES (:vacancyName,:companyID,:date,:details)");
-				//echo "2";
-				$stmt->bindParam(':vacancyName', $name);
-				$stmt->bindParam(':companyID', $companyID);
-				$stmt->bindParam(':date', $date);
-				$stmt->bindParam(':details', $details);
-    			$stmt->execute();
+				$stmt1 = $connection1->prepare("SELECT * FROM vacancy WHERE vacancy_id=?");
+				
+    			$stmt1->execute([$vacancyID]);
 
+			    $result1 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+				$result2 = $stmt1->fetchAll();
+				$rows = $stmt1->rowCount();
 			    
-				$rows = $stmt->rowCount();
-			    
-			    if($rows >0)
-			    	return true;
-			    else
-			    	return false;
+			    return array($result2,$rows);
 			}catch(PDOException $e)
 			{
 				echo "Connection failed: " . $e->getMessage();
-				return false;
+				return null;
+
+			}
+		}
+		
+		//edit student profile
+		public static function editStudent($studentID,$userName,$firstname,$lastname,$email,$tp,$address,$qualification)
+		{
+			
+			try
+			{
+				
+				$connection1 = $GLOBALS['connection'];
+				$stmt = $connection1->prepare("UPDATE graduates SET user_name=:userName,first_name=:firstname,last_name=:lastname,email=:email,telephone=:tp,address=:address,extra_qualificaation=:qualification WHERE student_id=:studentID");
+				$stmt->bindParam(':userName', $userName);
+				$stmt->bindParam(':firstname', $firstname);
+				$stmt->bindParam(':lastname', $lastname);
+				$stmt->bindParam(':email', $email);
+				$stmt->bindParam(':tp', $tp);
+				
+				
+				$stmt->bindParam(':address', $address);
+				$stmt->bindParam(':qualification', $qualification);
+				$stmt->bindParam(':studentID', $studentID);
+    			$stmt->execute();
+
+			    $result1 = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+				
+				$rows = $stmt->rowCount();
+				echo "<br/>"."my roe : ".$rows;
+			    
+			    if($rows == 1)
+			    {
+			    	return true;
+
+			    }else
+			    {
+			    	return false;
+			    }
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return null;
 
 			}
 		}

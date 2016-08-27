@@ -45,15 +45,15 @@
 <form action="edit_profile.php" name=post>
 
 <table>
-<tr><td> First Name: $sname1 </td></tr>
-<tr><td> Last Name: $sname2 </td></tr>
-<tr><td> User Name:$uname </td></tr>
+<tr><td> First Name: $name1 </td></tr>
+<tr><td> Last Name: $name2 </td></tr>
+<tr><td> User Name:$usrname </td></tr>
 
 <tr><td>Address: $add </td></tr>
-<tr><td>Telephone : $tel </td></tr>
+<tr><td>Telephone : $telp </td></tr>
 
-<tr><td>Email:  $email </td></tr>
-<tr><td>Qualifications: . $qua </td></tr>
+<tr><td>Email:  $mail </td></tr>
+<tr><td>Qualifications: . $qual </td></tr>
 <tr><td>GPA: . $gpa </td></tr></table>
 
 <input type="submit" value="Edit Profile"></form></div>

@@ -1,17 +1,47 @@
-<?php include("../includes/new_main_header.php");?>
+<!DOCTYPE HTML >
+
+<?php include("../../includes/main/header.php"); 
+	  include("../../includes/navigations/nav_active_skill_directory.php");
+
+?>
+
+<?php include("skilldir_student_functions.php"); ?>
+
+
+<?php session_start();
+
+	if(isset($_SESSION["mainUserName"]))
+	{
+		
+		$mainUserName = $_SESSION["mainUserName"];
+		
+		
+	}else
+	{
+		$_SESSION["errorMessage"]="Error in login";
+		SkillDirectoryStudent::redirect_to("login_page.php");
+	}
+
+
+	if(isset($_SESSION["editStudentMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["editStudentMessage"]."')</script>";
+    	$_SESSION["editStudentMessage"] =null;
+	}
+?>
 
 <div style="background-color:lightcyan; color:black; padding:15px; ">
 
-<h1 style="text-align:center;">student name</h1>
+
 <img src="user.jpg"  style="width:100px;height:100px;">
 
 
 </div>
 <div style="background-color:black; padding:5px; ">
-	<button type="button" style="background-color:blue;"><font color="white">Profile</font></button>
-	<button type="button"><font color="blue">Vacancy</font></button>
-	<button type="button"><font color="blue">Search</font></button>
-	<button type="button"><font color="blue">Logout</font></button>
+	<a href="skill_profile.php"><button type="button" style="background-color:blue;"><font color="white">Profile</font></button></a>
+	<a href="skill_vacancy.php"><button type="button"><font color="blue">Vacancy</font></button></a>
+	<a href="skill_search.php"><button type="button"><font color="blue">Search</font></button></a>
+	<a href="?"><button type="button"><font color="blue">Logout</font></button></a>
 
 </div>
 
@@ -40,23 +70,26 @@
 
 <!-- content area -->
 <div class="static">
-<div class="form">
-<p style="font-size:150%">Student Profile </p>
-<form action="edit_profile.php" name=post>
+	<div class="form">
+		<p style="font-size:150%">Student Profile </p>
+			<tr><td> Company Name:<?php echo $result[0]['name'];?> </td></tr>
 
-<table>
-<tr><td> First Name: $sname1 </td></tr>
-<tr><td> Last Name: $sname2 </td></tr>
-<tr><td> User Name:$uname </td></tr>
+				<table>
+					<tr><td> First Name:<?php echo $result[0]['first_name'];?> </td></tr>
+					<tr><td> Last Name: <?php echo $result[0]['last_name'];?> </td></tr>
+					<tr><td> User Name:<?php echo $result[0]['user_name'];?></td></tr>
 
-<tr><td>Address: $add </td></tr>
-<tr><td>Telephone : $tel </td></tr>
+					<tr><td>Address: <?php echo $result[0]['address'];?> </td></tr>
+					<tr><td>Telephone : <?php echo $result[0]['telephone'];?> </td></tr>
 
-<tr><td>Email:  $email </td></tr>
-<tr><td>Qualifications: . $qua </td></tr>
-<tr><td>GPA: . $gpa </td></tr></table>
+					<tr><td>Email:  <?php echo $result[0]['email'];?> </td></tr>
+					<tr><td>Qualifications: <?php echo $result[0]['extra_qualification'];?> </td></tr>
+					<tr><td>GPA: <?php echo $result[0]['gpa'];?></td></tr>
+				</table>
 
-<input type="submit" value="Edit Profile"></form></div>
+			<a href=edit_profile.php?graduates=<?php echo $_SESSION["mainID"]; ?>>Edit Profile</a>
+			</form>
+	</div>
 
 </div>
 
