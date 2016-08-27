@@ -51,6 +51,39 @@
 
 		}
 
+		//validate company access by user name and password
+		public static function validateCompanyPassword($companyID,$passwordCompany)
+		{
+			
+			try
+			{
+				
+				$connection = $GLOBALS['connection'];
+				$stmt = $connection->prepare("SELECT * FROM company WHERE company_id=?");
+    			$stmt->execute([$companyID]);
+
+			    
+			    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+			    $result1 = $stmt->fetchAll();
+			    
+			    if(intval($result1[0]['password'])==intval($passwordCompany))
+			    {
+			    	
+			    	return true;
+			    }else
+			    {
+			    	return false;
+			    }
+			     
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return false;
+
+			}
+
+		}
+
 		//redirect function 
 		public static function redirect_to($new_location)
 		{
@@ -294,6 +327,41 @@
 			{
 				echo "Connection failed: " . $e->getMessage();
 				return null;
+
+			}
+		}
+
+		//change password
+		public static function changePassword($companyID,$newPassword)
+		{
+			
+			try
+			{
+				//echo $userNameCompany;
+				$connection1 = $GLOBALS['connection'];
+				$stmt1 = $connection1->prepare("UPDATE company SET password=:password WHERE company_id=:companyID");
+				//echo "2";
+				//$stmt->bindParam(':user_name', $userNameCompany);
+				$stmt1->bindParam(':password', $newPassword);
+				$stmt1->bindParam(':companyID', $companyID);
+    			$stmt1->execute();
+
+			    $result1 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+				//$result2 = $stmt1->fetchAll();
+				$rows = $stmt1->rowCount();
+				//echo "leel ".$rows;
+			    
+			    if($rows == 1)
+			    {
+			    	return true;
+			    }
+			    else{
+			    	return false;
+			    }
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return false;
 
 			}
 		}

@@ -25,6 +25,12 @@
 		echo "<script type='text/javascript'>alert('".$_SESSION["editCompanyMessage"]."')</script>";
     	$_SESSION["editCompanyMessage"] =null;
 	}
+
+	if(isset($_SESSION["changePasswordMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["changePasswordMessage"]."')</script>";
+    	$_SESSION["changePasswordMessage"] =null;
+	}
 ?>
 
 	
@@ -63,7 +69,7 @@
 <a href="comprofile.php"><button class="button" type="button">Profile</button></a>
 <a href="AllVacancy.php"><button class="button" type="button">Vacancies</button></a>
 <a href="searchc.php"><button class="button" type="button">Search</button></a>
-<a href=""><button class="button" type="button">Logout</button></a>
+<a href="logout.php"><button class="button" type="button">Logout</button></a>
 </div>
 
 
@@ -87,6 +93,8 @@
 				</table>
 			<input type="submit" value="Update" name="companyUpdate">
 		</form>
+
+		<a href=changePassword.php?company=<?php echo $companyID; ?> >Change password</a>
 		</div>
 
 	</div>
