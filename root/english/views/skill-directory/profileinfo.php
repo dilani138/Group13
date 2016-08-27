@@ -25,6 +25,12 @@
 		echo "<script type='text/javascript'>alert('".$_SESSION["editCompanyMessage"]."')</script>";
     	$_SESSION["editCompanyMessage"] =null;
 	}
+
+	if(isset($_SESSION["changePasswordMessage"]))
+	{
+		echo "<script type='text/javascript'>alert('".$_SESSION["changePasswordMessage"]."')</script>";
+    	$_SESSION["changePasswordMessage"] =null;
+	}
 ?>
 
 	
@@ -87,6 +93,8 @@
 				</table>
 			<input type="submit" value="Update" name="companyUpdate">
 		</form>
+
+		<a href=changePassword.php?company=<?php echo $companyID; ?> >Change password</a>
 		</div>
 
 	</div>
