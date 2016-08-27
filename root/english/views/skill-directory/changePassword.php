@@ -9,7 +9,7 @@
 	
 	if(isset($_GET["company"]))
 	{
-		$comapnyID= $_GET["company"];
+		$companyID= $_GET["company"];
 		echo $_GET["company"];
 	}else
 	{
@@ -24,27 +24,33 @@
 		$currentPassword = $_POST["currentPassword"];
 		$newpassword1 = $_POST["newpassword1"];
 		$newpassword2 = $_POST["newpassword2"];
-		
-		$validateCompany = SkillDirectoryCompany::validateCompanyPassword($comapnyID,$currentPassword);
-		echo "<br/ >validate".$validateCompany;
 
-		if($validateCompany==true)
+		//echo $newpassword1.$newpassword2;
+		
+		$validateCompany = SkillDirectoryCompany::validateCompanyPassword($companyID,$currentPassword);
+		//echo strcmp($newpassword1,$newpassword2);
+
+		if($validateCompany==1)
 		{
-			if(strcmp($newpassword1,$newpassword2)==0)
+			//echo "<br/ >validate".$validateCompany;
+			if((strcmp($newpassword1,$newpassword2))==0)
 			{
+				//echo "<br> hello<br>";
+				//echo (is_string($newpassword1))."<br>";
 				$result = SkillDirectoryCompany::changePassword($companyID,$newpassword1);
 
+				//echo $result;
 				if($result)
 				{
 					$_SESSION["changePasswordMessage"]="change password correctly";
-					SkillDirectoryCompany::redirect_to("profileinfo.php");
+					SkillDirectoryCompany::redirect_to("profileinfo.php?company=".$companyID);
 				}else
 				{
 					$_SESSION["changePasswordMessage"]="change password fails";
-					SkillDirectoryCompany::redirect_to("profileinfo.php");
+					SkillDirectoryCompany::redirect_to("profileinfo.phpcompany=".$companyID);
 				}
 
-				SkillDirectoryCompany::redirect_to("profileinfo.php");
+				//SkillDirectoryCompany::redirect_to("profileinfo.php");
 			}else
 			{
 				echo "<script type='text/javascript'>alert('wrong new password')</script>";
@@ -54,6 +60,7 @@
 		{
 			echo "<script type='text/javascript'>alert('wrong password')</script>";
 			//SkillDirectoryCompany::redirect_to("login_page.php");
+			//echo "wrong pass";
 		}
 	}
 

@@ -342,18 +342,22 @@
 				$stmt1 = $connection1->prepare("UPDATE company SET password=:password WHERE company_id=:companyID");
 				//echo "2";
 				//$stmt->bindParam(':user_name', $userNameCompany);
-				$stmt->bindParam(':password', $newPassword);
-				$stmt->bindParam(':companyID', $companyID);
+				$stmt1->bindParam(':password', $newPassword);
+				$stmt1->bindParam(':companyID', $companyID);
     			$stmt1->execute();
 
 			    $result1 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
 				//$result2 = $stmt1->fetchAll();
 				$rows = $stmt1->rowCount();
+				//echo "leel ".$rows;
 			    
-			    if($rows ==1)
+			    if($rows == 1)
+			    {
 			    	return true;
-			    else
+			    }
+			    else{
 			    	return false;
+			    }
 			}catch(PDOException $e)
 			{
 				echo "Connection failed: " . $e->getMessage();
