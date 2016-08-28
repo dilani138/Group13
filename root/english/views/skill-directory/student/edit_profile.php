@@ -39,7 +39,7 @@
 	<a href="skill_profile.php"><button type="button" style="background-color:blue;"><font color="white">Profile</font></button></a>
 	<a href="skill_vacancy.php"><button type="button"><font color="blue">Vacancy</font></button></a>
 	<a href="skill_search.php"><button type="button"><font color="blue">Search</font></button></a>
-	<a href="?"><button type="button"><font color="blue">Logout</font></button></a>
+	<a href=""><button type="button"><font color="blue">Logout</font></button></a>
 
 </div>
 
@@ -83,9 +83,7 @@
 				</table>
 			<input type="submit" value="Update" name="studentUpdate">
 			</form>
-			<form action="password_change.php" name=post>
-				<input type="submit" value="Change Password" name="password_change" >
-			</form>
+			<a href=changePassword.php?graduates=<?php echo $studentID; ?> >Change password</a>
 
 	</div>
 

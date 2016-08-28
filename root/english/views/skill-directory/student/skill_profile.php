@@ -1,7 +1,7 @@
 <!DOCTYPE HTML >
 
-<?php include("../../includes/main/header.php"); 
-	  include("../../includes/navigations/nav_active_skill_directory.php");
+<?php include("../../../includes/main/header.php"); 
+	  include("../../../includes/navigations/nav_active_skill_directory.php");
 
 ?>
 
@@ -33,7 +33,7 @@
 <div style="background-color:lightcyan; color:black; padding:15px; ">
 
 
-<img src="user.jpg"  style="width:100px;height:100px;">
+<img src="linux.jpg"  style="width:100px;height:100px;">
 
 
 </div>
@@ -41,7 +41,7 @@
 	<a href="skill_profile.php"><button type="button" style="background-color:blue;"><font color="white">Profile</font></button></a>
 	<a href="skill_vacancy.php"><button type="button"><font color="blue">Vacancy</font></button></a>
 	<a href="skill_search.php"><button type="button"><font color="blue">Search</font></button></a>
-	<a href="?"><button type="button"><font color="blue">Logout</font></button></a>
+	<a href=""><button type="button"><font color="blue">Logout</font></button></a>
 
 </div>
 
@@ -72,7 +72,7 @@
 <div class="static">
 	<div class="form">
 		<p style="font-size:150%">Student Profile </p>
-			<tr><td> Company Name:<?php echo $result[0]['name'];?> </td></tr>
+			
 
 				<table>
 					<tr><td> First Name:<?php echo $result[0]['first_name'];?> </td></tr>
