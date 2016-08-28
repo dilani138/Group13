@@ -1,7 +1,7 @@
 <!DOCTYPE HTML >
 
-<?php include("../../../includes/main/header.php"); 
-	  include("../../../includes/navigations/nav_active_skill_directory.php");
+<?php include("../../includes/main/header.php"); 
+	  include("../../includes/navigations/nav_active_skill_directory.php");
 
 ?>
 
