@@ -10,7 +10,7 @@ var imagecount = 1;
     if(imagecount == 0){imagecount=5;}
     if(imagecount==5){imagecount=1;}
 
-    image.src = "Images/"+imagecount+".png";
+    image.src = "Images/"+imagecount+".jpg";
 
   }
 
@@ -23,7 +23,7 @@ var imagecount = 1;
     if(imagecount == 0){imagecount=5;}
     if(imagecount==5){imagecount=1;}
 
-    image.src = "Images/uploadImages/"+imagecount+".png";
+    image.src = "Images/uploadImages/"+imagecount+".jpg";
 
   },3000);
 

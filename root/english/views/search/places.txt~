@@ -1,0 +1,10 @@
+anuradhapura 8.311352 80.403651
+kandy 7.290572 80.633726
+
+insert into center values(1,'main_center','Colombo',6.897536,79.879199)
+insert into center values(2,'test_center_1','Anuradhapura',8.311352,80.403651)
+insert into center values(3,'test_center_2','Anuradhapura',8.339352,80.411832)
+insert into center values(4,'test_colombo_center_1','Colombo',6.900777,79.860133)
+insert into center values(5,'test_colombo_center_2','Colombo',6.924506,79.875825)
+
+insert into course_center values(1,1);

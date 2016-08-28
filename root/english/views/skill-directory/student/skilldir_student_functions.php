@@ -23,6 +23,9 @@
 				
 				$connection = $GLOBALS['connection'];
 				$stmt = $connection->prepare("SELECT * FROM graduates WHERE user_name=?");
+<<<<<<< HEAD
+                                $stmt->execute([$userNameCompany]);
+=======
     			$stmt->execute([$userNameStudent]);
 
 			    
@@ -57,6 +60,7 @@
 				$connection = $GLOBALS['connection'];
 				$stmt = $connection->prepare("SELECT * FROM graduates WHERE student_id=?");
     			$stmt->execute([$studentID]);
+>>>>>>> e9a46d2c3dfd1c990c219730d03386a4a7a9e0a2
 
 			    
 			    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
