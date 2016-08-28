@@ -23,9 +23,9 @@
 				
 				$connection = $GLOBALS['connection'];
 				$stmt = $connection->prepare("SELECT * FROM graduates WHERE user_name=?");
-<<<<<<< HEAD
+
                                 $stmt->execute([$userNameCompany]);
-=======
+
     			$stmt->execute([$userNameStudent]);
 
 			    
