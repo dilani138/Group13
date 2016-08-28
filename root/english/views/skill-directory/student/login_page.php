@@ -1,7 +1,7 @@
 <div class="container">
     <?php
-        include("../../includes/main/header.php");
-        include("../../includes/navigations/nav_active_skill_directory.php");
+        include("../../../includes/main/header.php");
+        include("../../../includes/navigations/nav_active_skill_directory.php");
     ?>
 </div>
 
@@ -62,5 +62,5 @@ if(isset($_SESSION["errorMessage"]))
 </div>
 
  <?php
-        include("../../includes/main/footer.php");
+        include("../../../includes/main/footer.php");
 ?>
