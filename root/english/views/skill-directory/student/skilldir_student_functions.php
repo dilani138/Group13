@@ -47,6 +47,39 @@
 
 		}
 		
+		//validate password
+		public static function validateStudentPassword($studentID,$passwordStudent)
+		{
+			
+			try
+			{
+				
+				$connection = $GLOBALS['connection'];
+				$stmt = $connection->prepare("SELECT * FROM graduates WHERE student_id=?");
+    			$stmt->execute([$studentID]);
+
+			    
+			    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+			    $result1 = $stmt->fetchAll();
+			    
+			    if(intval($result1[0]['password'])==intval($passwordStudent))
+			    {
+			    	
+			    	return true;
+			    }else
+			    {
+			    	return false;
+			    }
+			     
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return false;
+
+			}
+
+		}
+		
 		//redirect function 
 		public static function redirect_to($new_location)
 		{
@@ -190,6 +223,41 @@
 			{
 				echo "Connection failed: " . $e->getMessage();
 				return null;
+
+			}
+		}
+		
+		//change password
+		public static function changePassword($studentID,$newPassword)
+		{
+			
+			try
+			{
+				//echo $userNameCompany;
+				$connection1 = $GLOBALS['connection'];
+				$stmt1 = $connection1->prepare("UPDATE graduates SET password=:password WHERE student_id=:studentID");
+				//echo "2";
+				//$stmt->bindParam(':user_name', $userNameCompany);
+				$stmt1->bindParam(':password', $newPassword);
+				$stmt1->bindParam(':studentID', $studentID);
+    			$stmt1->execute();
+
+			    $result1 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+				//$result2 = $stmt1->fetchAll();
+				$rows = $stmt1->rowCount();
+				//echo "leel ".$rows;
+			    
+			    if($rows == 1)
+			    {
+			    	return true;
+			    }
+			    else{
+			    	return false;
+			    }
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return false;
 
 			}
 		}

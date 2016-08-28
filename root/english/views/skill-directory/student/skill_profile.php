@@ -41,7 +41,7 @@
 	<a href="skill_profile.php"><button type="button" style="background-color:blue;"><font color="white">Profile</font></button></a>
 	<a href="skill_vacancy.php"><button type="button"><font color="blue">Vacancy</font></button></a>
 	<a href="skill_search.php"><button type="button"><font color="blue">Search</font></button></a>
-	<a href="?"><button type="button"><font color="blue">Logout</font></button></a>
+	<a href=""><button type="button"><font color="blue">Logout</font></button></a>
 
 </div>
 
