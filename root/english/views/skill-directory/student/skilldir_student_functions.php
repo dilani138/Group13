@@ -261,6 +261,32 @@
 
 			}
 		}
+		
+		//get vacancy details 
+		public static function getVacancyDetails()
+		{
+			
+			try
+			{
+				//echo $userNameCompany;
+				$connection1 = $GLOBALS['connection'];
+				$stmt1 = $connection1->prepare("SELECT * FROM vacancy");
+				//echo "2";
+				//$stmt->bindParam(':user_name', $userNameCompany);
+    			$stmt1->execute();
+
+			    $result1 = $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+				$result2 = $stmt1->fetchAll();
+				$rows = $stmt1->rowCount();
+			    
+			    return array($result2,$rows);
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return null;
+
+			}
+		}
 	}
 
 ?>

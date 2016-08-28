@@ -1,8 +1,23 @@
-<?php include("../includes/new_main_header.php");?>
+<!DOCTYPE HTML >
+
+<?php 
+	include("../../includes/main/header.php");
+	include("../../includes/navigations/nav_active_skill_directory.php");
+	?>
+
+<?php include("skill_student_functions.php"); ?>
+
+<?php 
+	session_start();
+	$resultArray = SkillDirectoryStudent::getVacancyDetails();
+	$rows = $resultArray[1];
+	$result = $resultArray[0];
+	
+?>
 
 <div style="background-color:lightcyan; color:black; padding:15px; ">
 
-	<h1 style="text-align:center;">student name</h1>
+	
 	<img src="linux.jpg"  style="width:100px;height:100px;">
 
 
@@ -15,35 +30,23 @@
 </div>
 
 <!-- students can see vacancies from here -->
-<div style="background-color:dodgerblue; padding:8px; ">
-	<font color="white">Company_Name/Vacancy</font>
-</div>
+<div id="vacancyContainer">
+		
+		<?php
+			for($i=0;$i<$rows;$i++)
+			{
+				echo "<div id= vacancy>";
+				echo "Vacancy Name : ".$result[$i]['vacancy_name']."<br>";
+				echo "Date : ".$result[$i]['date']."<br>";
+				echo "Detais : ".$result[$i]['details']."<br>";
+				//echo "<a href=editVacancy.php?vacancy=".$result[$i]['vacancy_id'].">Edit Vacancy</a>";
+				echo "</div>";
+			}
 
-<div style="background-color:powderblue; padding:70px; ">
-	<font style="text-align:right;" color="black">
-		about company vacancies
-	</font>
-</div>
+		?>
 
-<div style="background-color:dodgerblue; padding:8px; ">
-	<font color="white">Company_Name/Vacancy</font>
-</div>
+	</div>
 
-<div style="background-color:powderblue; padding:70px; ">
-	<font style="text-align:left;" color="black">
-		about company vacancies
-	</font>
-</div>
-
-<div style="background-color:dodgerblue; padding:8px; ">
-	<font color="white">Company_Name/Vacancy</font>
-</div>
-
-<div style="background-color:powderblue; padding:70px; ">
-	<font style="text-align:center;" color="black">
-		about company vacancies
-	</font>
-</div>
 
 
 
