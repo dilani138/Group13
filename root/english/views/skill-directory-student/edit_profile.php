@@ -83,7 +83,7 @@
 				</table>
 			<input type="submit" value="Update" name="studentUpdate">
 			</form>
-			<a href=changePassword.php?graduates=<?php echo $studentID; ?> >Change password</a>
+			<a href=changePassword.php?graduates=<?php echo $_SESSION["mainID"]; ?><button type="button" style="background-color:blue;"><font color="white"> Change Password</font></button></a>
 
 	</div>
 

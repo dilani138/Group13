@@ -1,7 +1,7 @@
 <div class="container">
     <?php
-        include("../../../includes/main/header.php");
-        include("../../../includes/navigations/nav_active_skill_directory.php");
+        include("../../includes/main/header.php");
+        include("../../includes/navigations/nav_active_skill_directory.php");
     ?>
 </div>
 
@@ -22,7 +22,7 @@ if(isset($_SESSION["errorMessage"]))
         <div class= "col-c-1 " >
         <div class= "col-c-3-2 right " >
 
-		<form method="post" action="../../php/login_query.php">
+		<form method="post" action="login_query.php">
             <table border="0px" align="cener">
                 <tr>
                     <td>User Name :</td>
@@ -62,5 +62,5 @@ if(isset($_SESSION["errorMessage"]))
 </div>
 
  <?php
-        include("../../../includes/main/footer.php");
+        include("../../includes/main/footer.php");
 ?>

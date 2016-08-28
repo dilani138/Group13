@@ -1,7 +1,7 @@
 <!DOCTYPE HTML >
 
-<?php include("../../../includes/main/header.php"); 
-	  include("../../../includes/navigations/nav_active_skill_directory.php");
+<?php include("../../includes/main/header.php"); 
+	  include("../../includes/navigations/nav_active_skill_directory.php");
 
 ?>
 
@@ -86,8 +86,8 @@
 					<tr><td>Qualifications: <?php echo $result[0]['extra_qualification'];?> </td></tr>
 					<tr><td>GPA: <?php echo $result[0]['gpa'];?></td></tr>
 				</table>
-
-			<a href=edit_profile.php?graduates=<?php echo $_SESSION["mainID"]; ?>>Edit Profile</a>
+			
+			<a href=edit_profile.php?graduates=<?php echo $_SESSION["mainID"]; ?><button type="button" style="background-color:blue;"><font color="white"> Edit Profile</font></button></a>
 			</form>
 	</div>
 

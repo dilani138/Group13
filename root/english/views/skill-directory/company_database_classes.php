@@ -33,7 +33,40 @@
 			    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 			    $result1 = $stmt->fetchAll();
 			    
-			    if(intval($result1[0]['password'])==intval($passwordCompany))
+			    if($result1[0]['password']==$passwordCompany)
+			    {
+			    	
+			    	return true;
+			    }else
+			    {
+			    	return false;
+			    }
+			     
+			}catch(PDOException $e)
+			{
+				echo "Connection failed: " . $e->getMessage();
+				return false;
+
+			}
+
+		}
+
+		//validate company access by user name and password
+		public static function validateGraduateAccess($userNameCompany,$passwordCompany)
+		{
+			
+			try
+			{
+				
+				$connection = $GLOBALS['connection'];
+				$stmt = $connection->prepare("SELECT * FROM graduates WHERE user_name=?");
+    			$stmt->execute([$userNameCompany]);
+
+			    
+			    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+			    $result1 = $stmt->fetchAll();
+			    
+			    if($result1[0]['password']==$passwordCompany)
 			    {
 			    	
 			    	return true;

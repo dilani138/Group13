@@ -1,8 +1,11 @@
-<?php include("../includes/new_main_header.php");?>
+<?php include("../../includes/main/header.php"); 
+	  include("../../includes/navigations/nav_active_skill_directory.php");
+
+?>
 
 <div style="background-color:lightcyan; color:black; padding:15px; ">
 
-<h1 style="text-align:center;">student name</h1>
+
 <img src="linux.jpg"  style="width:100px;height:100px;">
 
 
