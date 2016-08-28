@@ -33,7 +33,7 @@
 <div style="background-color:lightcyan; color:black; padding:15px; ">
 
 
-<img src="user.jpg"  style="width:100px;height:100px;">
+<img src="linux.jpg"  style="width:100px;height:100px;">
 
 
 </div>
@@ -72,7 +72,7 @@
 <div class="static">
 	<div class="form">
 		<p style="font-size:150%">Student Profile </p>
-			<tr><td> Company Name:<?php echo $result[0]['name'];?> </td></tr>
+			
 
 				<table>
 					<tr><td> First Name:<?php echo $result[0]['first_name'];?> </td></tr>

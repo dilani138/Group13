@@ -9,7 +9,7 @@
 	
 	if(isset($_GET["graduates"]))
 	{
-		$companyID= $_GET["graduates"];
+		$studentID= $_GET["graduates"];
 		echo $_GET["graduates"];
 	}else
 	{
@@ -27,7 +27,7 @@
 
 		
 		
-		$validateCompany = SkillDirectoryStudent::validateStudentPassword($studentID,$currentPassword);
+		$validateStudent = SkillDirectoryStudent::validateStudentPassword($studentID,$currentPassword);
 		
 
 		if($validateStudent==1)
@@ -47,7 +47,7 @@
 				}else
 				{
 					$_SESSION["changePasswordMessage"]="change password fails";
-					SkillDirectoryCompany::redirect_to("edit_profile.phpgraduates=".$studentID);
+					SkillDirectoryStudent::redirect_to("edit_profile.phpgraduates=".$studentID);
 				}
 
 				//SkillDirectoryCompany::redirect_to("profileinfo.php");
