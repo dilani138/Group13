@@ -7,7 +7,8 @@
 	//connection data for database
 	$severName = "localhost";
 	$userName = "root";
-	$password = "£5shashika5£";
+	//$password = "£5shashika5£";
+	$password="";
 	$databaseName = "webmis";
 
 	//connecting function for database

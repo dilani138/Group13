@@ -197,7 +197,7 @@
 			{
 				
 				$connection1 = $GLOBALS['connection'];
-				$stmt = $connection1->prepare("UPDATE graduates SET user_name=:userName,first_name=:firstname,last_name=:lastname,email=:email,telephone=:tp,address=:address,extra_qualificaation=:qualification WHERE student_id=:studentID");
+				$stmt = $connection1->prepare("UPDATE graduates SET user_name=:userName,first_name=:firstname,last_name=:lastname,email=:email,telephone=:tp,address=:address,extra_qualification=:qualification WHERE student_id=:studentID");
 				$stmt->bindParam(':userName', $userName);
 				$stmt->bindParam(':firstname', $firstname);
 				$stmt->bindParam(':lastname', $lastname);

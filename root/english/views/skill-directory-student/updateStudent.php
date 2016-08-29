@@ -1,3 +1,5 @@
+
+<?php include("skilldir_student_functions.php"); ?>
 <?php
 	
 	session_start();

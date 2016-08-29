@@ -68,6 +68,13 @@
 }
 </style>
 
+<?php $result = SkillDirectoryStudent::getStudentDetails($mainUserName);
+	
+	$_SESSION["mainID"] = $result[0]['student_id'];
+
+
+?>
+
 <!-- content area -->
 <div class="static">
 	<div class="form">

@@ -70,7 +70,7 @@
 <div class="static">
 	<div class="form">
 		<p style="font-size:150%">Edit your Profile Information here!</p>
-			<form action="updateStudent.php" method=post>
+			<form action="updateStudent.php" method="post">
 				<table>
 					
 					<tr><td> First Name:</td><td> <input type="text" name="sname1" value=<?php echo $result[0]['first_name'];?>></td></tr>
