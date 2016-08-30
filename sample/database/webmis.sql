@@ -40,8 +40,10 @@ CREATE TABLE `appliers` (
   `home_telephone` int(12) NOT NULL,
   `mobile` int(12) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `trade` tinyint(40) NOT NULL,
+  `olevel` tinyint(4) NOT NULL,
+  `other` varchar(200) DEFAULT NULL,
   `time` tinyint(1) NOT NULL,
-  `course_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

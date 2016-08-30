@@ -1,11 +1,11 @@
 <!-- |THIS IS apply on line PAGE| -->
 
 <!-- |OVERALL HEADER OF THE PAGE| -->
-<?php include("../../includes/main/header.php") ?>  <!-- |HEADER OF THE PAGE| -->
-<?php include("../../includes/navigations/nav_active_apply_on_line.php") ?> <!-- |NAVIGATION OF THE PAGE| -->
+<?php include("../../includes/main/header.php");?>  <!-- |HEADER OF THE PAGE| -->
+<?php include("../../includes/navigations/nav_active_apply_on_line.php"); ?> <!-- |NAVIGATION OF THE PAGE| -->
+<?php include("application_database_classes.php"); ?>
    
-   
-<?php include("company_database_classes.php"); ?>
+
    
 <!-- |CONTENT OF THE PAGE| -->
 <html>
@@ -71,7 +71,7 @@
     					<td colspan="2"> </td>
     				</th>
     			</thead>
-    			<form action="" method="post">
+    			<form action="" method="post" >
     			<tbody>
     				<tr>
     					<td><pF>*Initials:</pF><br><p>Put your initials here <br><p1></p></td>
@@ -182,8 +182,8 @@
     				<tr>
     					<td></td>
     					<td>
-    						<button class="button">Submit</button>
-    						<button class="button">Cancel</button>
+    						<button type="submit" value="Submit">Submit</button>
+    						<button type="submit" value="Submit">Cancel</button>
     					</td>
     				</tr>
     			</tfoot>

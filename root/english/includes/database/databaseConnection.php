@@ -23,7 +23,7 @@ class DatabaseConnection
 class DatabaseConnectionPDO
 {
 
-	public static function connectDatabase($severName,$userName,$password,$databaseName)
+	public static function connectDatabase($serverName,$userName,$password,$databaseName)
 	{
 		
 		
