@@ -30,7 +30,7 @@ CREATE TABLE `appliers` (
   `applier_id` int(11) NOT NULL,
   `initials` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
-  `nic` varchar(12) NOT NULL,
+  `nic` varchar(15) NOT NULL,
   `dob` date NOT NULL,
   `gender` tinyint(4) NOT NULL,
   `address_01` varchar(50) NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `appliers` (
   `trade` tinyint(40) NOT NULL,
   `olevel` tinyint(4) NOT NULL,
   `other` varchar(200) DEFAULT NULL,
-  `time` tinyint(1) NOT NULL,
+  `time` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

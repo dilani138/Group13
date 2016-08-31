@@ -71,11 +71,11 @@
     					<td colspan="2"> </td>
     				</th>
     			</thead>
-    			<form action="" method="post" >
+    			<form action="onlineApplicationQuery.php" method="post" >
     			<tbody>
     				<tr>
     					<td><pF>*Initials:</pF><br><p>Put your initials here <br><p1></p></td>
-    					<td><input type="text" name="FN"  required /></td>
+    					<td><input type="text" name="Initials"  required /></td>
     				</tr>
     				<tr>
     					<td><pF>*Last Name:</pF><br><p>Put your surname here <br><p1></p></td>
@@ -98,31 +98,31 @@
     				</tr>
     				<tr>
     					<td><pF>*Address 1:</pF><br><p>Address 1 here <br><p1></p></td>
-    					<td><input type="text" name="ADD1" required /></td>
+    					<td><input type="text" name="Add1" required /></td>
     				</tr>
 					<tr>
     					<td><pF>Address 2:</pF><br><p>Address 2 here <br><p1></p></td>
-    					<td><input type="text" name="ADD2" /></td>
+    					<td><input type="text" name="Add2" /></td>
     				</tr>
     				<tr>
     					<td><pF>*City:</pF><br><p>Type your city here <br><p1></p></td>
-    					<td><input type="text" name="EMAIL" required /></td>
+    					<td><input type="text" name="City" required /></td>
     				</tr>
 					<tr>
     					<td><pF>District:</pF><br><p>Type your District here <br><p1></p></td>
-    					<td><input type="text" name="EMAIL" /></td>
+    					<td><input type="text" name="District" /></td>
     				</tr>
     				<tr>
     					<td><pF>*Home Phone:</pF><br><p>Type your home number <br><p1></p></td>
-    					<td><input type="text" name="TELE" required /></td>
+    					<td><input type="text" name="HPhone" required /></td>
     				</tr>
 					<tr>
     					<td><pF>*Mobile:</pF><br><p>Type your mobile number <br><p1></p></td>
-    					<td><input type="text" name="TELE" required /></td>
+    					<td><input type="text" name="Mobile" required /></td>
     				</tr>
 					<tr>
     					<td><pF>*E-mail:</pF><br><pOrg>Please add correct email <br><p1></p2></td>
-    					<td><input type="text" name="TELE" required /></td>
+    					<td><input type="text" name="Email" required /></td>
     				</tr>
 					
 					<!--course Details................-->
@@ -133,7 +133,7 @@
     				<tr>
     					<td><pF>*Trade:</pF><br><p>Select your Favarite Trade <br><p1></p></td>
     					<td>
-    					<select name="COURSE" required>
+    					<select name="Course" required>
 							<option>Agriculture Plantation & Livestock</option>
 							<option>Automobile Repair & Maintenance</option>
 							<option>Building & Construction</option>
@@ -158,8 +158,8 @@
     				<tr>
     					<td><pF>*Full Time/Part Time:</pF><p1></td>
     					<td>
-    						<input type="radio" name="Full Time/Part Time" value="Full Time" required /> Full Time<br>
-    						<input type="radio" name="Full Time/Part Time" value="Part Time" required /> Part Time
+    						<input type="radio" name="FullPart" value="Full Time" required /> Full Time<br>
+    						<input type="radio" name="FullPart" value="Part Time" required /> Part Time
     					</td>
     				</tr>
 					<tr>
@@ -168,13 +168,13 @@
 					<tr>
     					<td><pF>*O/L:</pF><br><p>Ordinery Level Exam Done <br><p1></p></td>
     					<td>
-    						<input type="radio" name="o/l" value="Yes" required /> Yes<br>
-    						<input type="radio" name="o/l" value="No" required /> No
+    						<input type="radio" name="oLevel" value="Yes" required /> Yes<br>
+    						<input type="radio" name="oLevel" value="No" required /> No
     					</td>
     				</tr>
 					<tr>
     					<td><pF>Other:</pF><br><p>Your Other Qualifications <br><p1></p></td>
-    					<td><textarea rows="4" cols="22" name="comment" form="usrform">Enter text here...</textarea></td>
+    					<td><textarea rows="4" cols="22" name="Other" form="usrform">Enter text here...</textarea></td>
     				</tr>
     				</tr>
     			</tbody>
@@ -182,8 +182,8 @@
     				<tr>
     					<td></td>
     					<td>
-    						<button type="submit" value="Submit">Submit</button>
-    						<button type="submit" value="Submit">Cancel</button>
+    						<button type="submit" value="Submit" name="apply" >Submit</button>
+    						
     					</td>
     				</tr>
     			</tfoot>
