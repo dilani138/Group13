@@ -6,7 +6,7 @@
 class DatabaseConnection
 {
 
-	public static function connectDatabase($severName,$userName,$password,$databaseName) 
+	public static function connectDatabase($serverName,$userName,$password,$databaseName) 
 	{
 		$connection = new mysqli($serverName, $userName, $password, $databaseName);
 		echo "hello";

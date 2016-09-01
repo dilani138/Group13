@@ -24,21 +24,14 @@ if(isset($_SESSION["errorMessage"]))
 
 		
 
-            <form action="login_query.php" method="post">
-                <table border="0px" align="cener">
-                    <tr>
-                        <td>User Name :</td>
-                        <td><input type="text" name="un" placeholder="Enter Your User Name" required> </td>
-                    </tr>
-                    <tr>
-                        <td>Password :</td>
-                        <td><input type="password" name="pw" placeholder="Enter Your Password" required> </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit" name="login" value="Log In" > </td>
-                    </tr>
-                </table>
+            <form>
+            <div class="form-input">
+                <input type="text" name="username" placeholder="Enter Username">
+            </div>
+            <div class="form-input">
+                <input type="password" name="password" placeholder="Enter Password">
+            </div>
+            <input type="Submit" name="Submit" value="LOGIN" class="btn-login">
             </form>
 
         </div>       

@@ -25,7 +25,7 @@
 		//echo $nic;
 		//echo $email;
 
-		$flag = OnlineApplier::addApplierDetailsDatabase($initials,$lastName,$nic,$dob,$gender,$address01,$address02,$city,$district,$homeTelephone,$mobile,$email,$trade,$FullTimePartTime,$olevel,$other,$time);
+		$flag = OnlineApplier::addApplierDetailsDatabase($initials,$lastName,$nic,$dob,$gender,$address01,$address02,$city,$district,$homeTelephone,$mobile,$email,$time);
 		//echo $flag;
 
 		
