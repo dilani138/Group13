@@ -56,8 +56,8 @@
 			transition-duration: 0.4s;
 			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
 		}
-        body{
-                margin: auto;
+        bodyimg{
+               margin: auto;
                 background-image: url("application_background.png");
                 background-repeat: no-repeat;
                 background-size: 100% 720px;
@@ -65,10 +65,14 @@
 		
 		</style> 
 	</head>
-<body><body><div class="container"></body>
+    
+<body><bodyimg>
+<div class="col-b-2-r right">
+        <div class="col-c-1"></div></div>
+<div class="container" >
 <div class="contianer">
-    <div class="col-b-1" width="50%">
-    	<div class="col-c-1">
+    <div class="col-b-2" width="50%" >
+        <div class="col-c-1"><bodyimg>
     		<td> You can apply for our courses via on-line.<br>Please fill all the fields in this form and submit. Good luck!! </td><br>
     		<h2> On-line Application Form </h2>
 			<table border="0" width="50%">
@@ -84,7 +88,7 @@
     					<td><input type="text" name="Initials"   /></td>
     				</tr>
     				<tr>
-    					<td><pF>*Last Name:</pF><br><p>Put your surname here <br><p1></p></td>
+    					<td><pF>*Last Name:</pF><br><p>Put your surname<br><p1></p></td>
     					<td><input type="text" name="LN"  /></td>
     				</tr>
 					<tr>
@@ -115,7 +119,7 @@
     					<td><input type="text" name="City"  /></td>
     				</tr>
 					<tr>
-    					<td><pF>District:</pF><br><p>Type your District here <br><p1></p></td>
+    					<td><pF>District:</pF><br><p>Type your District<br><p1></p></td>
     					<td><input type="text" name="District" /></td>
     				</tr>
     				<tr>
@@ -142,7 +146,7 @@
     					<select name="Course" >
 							<option value="1" >Agriculture Plantation & Livestock</option>
 							<option value="2">Automobile Repair & Maintenance</option>
-							<option value="3">Building & Construction</option>
+							<option value="3">Building & Construction</option> 
 							<option value="4">Electrical,Electronic & Telecommunication</option>
 							<option value="5">Fisheries & Aquaculture</option>
 							<option value="6">Food Technology</option>
@@ -179,7 +183,7 @@
     					</td>
     				</tr>
 					<tr>
-    					<td><pF>Other:</pF><br><p>Your Other Qualifications <br><p1></p></td>
+    					<td><pF>Other:</pF><br><p>Other Qualifications <br><p1></p></td>
     					<td><textarea rows="4" cols="22" name="Other" form="usrform">Enter text here...</textarea></td>
     				</tr>
     				</tr>
@@ -195,10 +199,13 @@
     			</tfoot>
     			</form>
     		</table>
+            </bodyimg>
     	</div>
     </div>
 </div>
+</bodyimg>
 </body>
+
 </html>
 <!-- |FOOTER OF THE PAGE| -->
 <?php include("../../includes/main/footer.php") ?>
